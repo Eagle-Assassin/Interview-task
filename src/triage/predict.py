@@ -1,5 +1,10 @@
 from schema.riskcalculatorinput import ClaimInput
 import json
+import pandas as pd
+from pathlib import Path
+from src.triage.injest import preprocess_getstructrureddata
+from src.triage.model import GetFromLlm
+from src.triage.features import process_features
 
 
 
@@ -150,5 +155,50 @@ class ClaimTriageEvaluator(BaseRiskPriors):
 
 
 
+def run_pipeline(input_path: str, gold_path: str | None, outdir: str):
+
+    print("Starting triage pipeline...")
+ 
+    #inject the data
+    preprocess_getstructrureddata(input_path)
     
-        
+
+    #Analyse  and process the features
+    process_features()
+
+    #Predict the output
+    #initialize the evaluator object
+    claim_calculator=ClaimTriageEvaluator()
+
+
+    #Initialize output columns
+    outcols=['case_id','priority','risk_score','recommended_action','extracted_signals','confidence','rationale']
+
+    #load the processed dataframe
+    processed_df=pd.read_csv('data/processeddata/processeddf.csv')
+
+    claim_calculator = ClaimTriageEvaluator()
+    results = []
+
+    for i in range(0,len(processed_df)):
+        row=processed_df.loc[i].to_dict()
+        case_id=row['case_id']
+        risk_score=claim_calculator.calculate_risk_score(row)
+        priority=claim_calculator.determine_priority(risk_score)
+        action=claim_calculator.determine_action(row,risk_score)
+        confidence=claim_calculator.calculate_confidence(row)
+        extracted_signals=claim_calculator.build_extracted_signals(row)
+        results.append([case_id,priority,risk_score,action,extracted_signals,confidence,"test"])
+
+    df_out=pd.DataFrame(results,columns=outcols)
+
+    outdir = Path(outdir)
+    outdir.mkdir(parents=True, exist_ok=True)
+
+    output_file = outdir / "predictions.csv"
+    df_out.to_csv(output_file, index=False)
+
+    print(f"Results written to {output_file}")
+
+    if gold_path:
+        print(f"Gold cases provided: {gold_path}")

@@ -1,0 +1,201 @@
+case_id,priority,risk_score,recommended_action,extracted_signals,confidence,rationale
+C-00192,P3,0.39,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",55,test
+C-00265,P1,0.74,Route to legal review,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",35,test
+C-00289,P2,0.53,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-00337,P2,0.57,Request further information,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-00724,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-00751,P1,0.77,Immediate escalation,"{""jurisdiction"": ""Other"", ""service_line"": ""Legal"", ""claim_value_band"": ""Unknown"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-00796,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",35,test
+C-01000,P1,0.76,Proceed with standard handling,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-01002,P1,0.63,Escalate for coverage review,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",60,test
+C-01027,P3,0.35,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-01043,P2,0.5,Request further information,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-01250,P3,0.31,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""Unknown"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-01253,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",40,test
+C-01491,P2,0.54,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",55,test
+C-01628,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-01697,P0,1.0,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",45,test
+C-01838,P2,0.47,Request further information,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-01929,P3,0.36,Request further information,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-02183,P1,0.73,Escalate for investigation,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",75,test
+C-02227,P1,0.79,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-02257,P1,0.7,Escalate for investigation,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",75,test
+C-02428,P2,0.42,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-02430,P2,0.57,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No data available"", ""fraud_risk"": ""No data available""}",55,test
+C-02467,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",60,test
+C-02509,P2,0.51,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",60,test
+C-02568,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",45,test
+C-02646,P0,1.0,Immediate escalation,"{""jurisdiction"": ""Other"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",50,test
+C-02719,P1,0.78,Escalate for investigation,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",60,test
+C-02743,P0,0.96,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",65,test
+C-02868,P3,0.36,Escalate for investigation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",45,test
+C-02875,P1,0.64,Immediate escalation,"{""jurisdiction"": ""No data Available"", ""service_line"": ""Advisory"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-02914,P2,0.51,Request further information,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-03059,P3,0.27,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-03208,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",65,test
+C-03240,P1,0.63,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-03290,P2,0.44,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Advisory"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-03321,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",50,test
+C-03411,P0,0.86,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Advisory"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-03432,P2,0.53,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",45,test
+C-03459,P1,0.72,Escalate for investigation,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",60,test
+C-03464,P1,0.63,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-03470,P0,0.82,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",75,test
+C-03560,P1,0.61,Proceed with standard handling,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",45,test
+C-03568,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",45,test
+C-03691,P2,0.44,Request further information,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-04003,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""Yes""}",75,test
+C-04146,P0,1.0,Immediate escalation,"{""jurisdiction"": ""Other"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",75,test
+C-04216,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-04571,P1,0.71,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-04580,P2,0.59,Escalate for coverage review,"{""jurisdiction"": ""EU"", ""service_line"": ""Advisory"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",45,test
+C-04657,P2,0.47,Escalate for coverage review,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",45,test
+C-04968,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",50,test
+C-05023,P0,1.0,Immediate escalation,"{""jurisdiction"": ""Other"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",45,test
+C-05030,P1,0.67,Proceed with standard handling,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",65,test
+C-05062,P0,0.95,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-05122,P2,0.56,Escalate for investigation,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",75,test
+C-05369,P3,0.33,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-05409,P2,0.58,Route to legal review,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",60,test
+C-05523,P3,0.35,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-05550,P2,0.42,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-05609,P0,0.97,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",75,test
+C-05843,P2,0.47,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-06138,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",60,test
+C-06198,P2,0.48,Escalate for investigation,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",75,test
+C-06376,P1,0.66,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Advisory"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",65,test
+C-06398,P3,0.27,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-06638,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",45,test
+C-06679,P1,0.64,Proceed with standard handling,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No data available"", ""fraud_risk"": ""No""}",55,test
+C-06884,P0,0.9,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",65,test
+C-06945,P0,0.82,Escalate for coverage review,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",45,test
+C-06982,P0,0.82,Escalate for coverage review,"{""jurisdiction"": ""EU"", ""service_line"": ""Advisory"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No data available"", ""fraud_risk"": ""No""}",45,test
+C-07018,P1,0.71,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",65,test
+C-07101,P0,0.98,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",55,test
+C-07116,P3,0.25,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-07183,P3,0.38,Request further information,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",60,test
+C-07290,P3,0.31,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-07452,P0,0.8,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",50,test
+C-07499,P1,0.66,Proceed with standard handling,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-07565,P0,0.87,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-07583,P0,0.97,Escalate for coverage review,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",60,test
+C-07881,P1,0.63,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Advisory"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-07976,P1,0.66,Proceed with standard handling,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",65,test
+C-08066,P0,0.94,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-08131,P1,0.76,Escalate for coverage review,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",45,test
+C-08249,P2,0.41,Request further information,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-08251,P2,0.52,Escalate for investigation,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",75,test
+C-08253,P0,1.0,Route to legal review,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-08279,P0,1.0,Escalate for coverage review,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",45,test
+C-08305,P2,0.57,Escalate for coverage review,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",60,test
+C-08355,P1,0.68,Escalate for coverage review,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""Unknown"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",50,test
+C-08388,P2,0.46,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-08426,P2,0.43,Request further information,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-08557,P3,0.26,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-08587,P0,0.85,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",65,test
+C-08588,P0,1.0,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",60,test
+C-08681,P1,0.7,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-08799,P1,0.7,Escalate for investigation,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",50,test
+C-08816,P1,0.62,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-08943,P0,0.95,Immediate escalation,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-09129,P2,0.58,Request further information,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""Unknown"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",60,test
+C-09160,P0,1.0,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",75,test
+C-09247,P0,0.89,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-09319,P2,0.5,Reject claim,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",60,test
+C-09460,P1,0.76,Proceed with standard handling,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",50,test
+C-09468,P0,0.95,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-09634,P1,0.64,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Advisory"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-09826,P0,0.91,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",30,test
+C-09848,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",60,test
+C-09875,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",50,test
+C-09887,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",60,test
+C-10102,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",50,test
+C-10116,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",50,test
+C-10144,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-10205,P1,0.64,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""Yes""}",75,test
+C-10237,P0,0.93,Route to legal review,"{""jurisdiction"": ""No data Available"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",60,test
+C-10304,P2,0.46,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",45,test
+C-10343,P0,1.0,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",50,test
+C-10582,P3,0.3,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-10593,P2,0.4,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-10731,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",50,test
+C-10838,P0,0.94,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""Yes""}",50,test
+C-10852,P2,0.56,Escalate for coverage review,"{""jurisdiction"": ""EU"", ""service_line"": ""Advisory"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",45,test
+C-10974,P0,0.83,Escalate for investigation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",50,test
+C-10975,P2,0.49,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",65,test
+C-11036,P1,0.76,Reject claim,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""Unknown"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",60,test
+C-11242,P2,0.55,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-11306,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",60,test
+C-11652,P1,0.62,Proceed with standard handling,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-11694,P2,0.56,Request further information,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",60,test
+C-11833,P2,0.54,Request further information,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-11851,P1,0.75,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",65,test
+C-11894,P2,0.43,Request further information,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-11926,P0,0.82,Escalate for coverage review,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",45,test
+C-12029,P1,0.6,Proceed with standard handling,"{""jurisdiction"": ""UK"", ""service_line"": ""No data Available"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",55,test
+C-12035,P1,0.65,Proceed with standard handling,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-12168,P2,0.57,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",65,test
+C-12663,P0,0.81,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-12773,P2,0.47,Reject claim,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",60,test
+C-12788,P0,0.84,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",60,test
+C-12806,P0,0.9,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",60,test
+C-12901,P2,0.56,Request further information,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-12980,P0,0.82,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",75,test
+C-13156,P0,0.99,Immediate escalation,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""Yes""}",65,test
+C-13167,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",45,test
+C-13199,P2,0.55,Request further information,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-13405,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",45,test
+C-13440,P0,1.0,Route to legal review,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",45,test
+C-14225,P2,0.51,Escalate for coverage review,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",60,test
+C-14236,P0,1.0,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",60,test
+C-14241,P2,0.56,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Advisory"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-14273,P3,0.36,Request further information,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-14276,P0,0.93,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-14284,P1,0.7,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Advisory"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",75,test
+C-14592,P0,1.0,Escalate for investigation,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",50,test
+C-14606,P0,0.82,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",60,test
+C-14765,P0,0.89,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",75,test
+C-14778,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",40,test
+C-14831,P1,0.7,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-14977,P2,0.46,Escalate for investigation,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",50,test
+C-15003,P0,0.85,Immediate escalation,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-15114,P0,0.88,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-15166,P0,0.92,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-15171,P0,1.0,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",50,test
+C-15350,P2,0.4,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-15368,P0,0.8,Proceed with standard handling,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-15653,P0,0.84,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",60,test
+C-15951,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",60,test
+C-16335,P0,0.94,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",65,test
+C-16405,P0,0.92,Route to legal review,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",50,test
+C-16634,P2,0.41,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-16858,P2,0.55,Request further information,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-16902,P3,0.26,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-17015,P0,0.92,Immediate escalation,"{""jurisdiction"": ""Other"", ""service_line"": ""Legal"", ""claim_value_band"": ""Unknown"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-17028,P0,0.83,Escalate for coverage review,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",45,test
+C-17171,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",50,test
+C-17224,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",75,test
+C-17360,P2,0.57,Escalate for investigation,"{""jurisdiction"": ""Other"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",75,test
+C-17661,P2,0.43,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",65,test
+C-17898,P1,0.72,Proceed with standard handling,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No data available"", ""fraud_risk"": ""No data available""}",65,test
+C-18367,P1,0.74,Proceed with standard handling,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",65,test
+C-18541,P1,0.67,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-18543,P3,0.39,Request further information,"{""jurisdiction"": ""EU"", ""service_line"": ""Advisory"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-18573,P2,0.53,Reject claim,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",60,test
+C-18607,P0,0.95,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",75,test
+C-18790,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",60,test
+C-18900,P2,0.51,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Advisory"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",75,test
+C-18932,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",30,test
+C-19078,P0,1.0,Immediate escalation,"{""jurisdiction"": ""Other"", ""service_line"": ""No data Available"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",65,test
+C-19176,P0,0.84,Escalate for coverage review,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",60,test
+C-19227,P0,1.0,Immediate escalation,"{""jurisdiction"": ""UK"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No""}",60,test
+C-19258,P2,0.44,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-19468,P1,0.72,Proceed with standard handling,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""<50k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-19474,P1,0.69,Escalate for investigation,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""Yes""}",60,test
+C-19543,P2,0.59,Request further information,"{""jurisdiction"": ""US"", ""service_line"": ""Advisory"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-19557,P1,0.68,Proceed with standard handling,"{""jurisdiction"": ""EU"", ""service_line"": ""Insurance"", ""claim_value_band"": "">1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-19750,P2,0.5,Request further information,"{""jurisdiction"": ""UK"", ""service_line"": ""Insurance"", ""claim_value_band"": ""250k-1m"", ""legal_risk"": ""No"", ""fraud_risk"": ""No data available""}",50,test
+C-19799,P0,1.0,Immediate escalation,"{""jurisdiction"": ""US"", ""service_line"": ""Legal"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",45,test
+C-19895,P2,0.59,Reject claim,"{""jurisdiction"": ""US"", ""service_line"": ""Insurance"", ""claim_value_band"": ""50k-250k"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",75,test
+C-19912,P2,0.42,Request further information,"{""jurisdiction"": ""EU"", ""service_line"": ""Advisory"", ""claim_value_band"": ""Unknown"", ""legal_risk"": ""No"", ""fraud_risk"": ""No""}",65,test
+C-20000,P0,1.0,Immediate escalation,"{""jurisdiction"": ""EU"", ""service_line"": ""Legal"", ""claim_value_band"": "">1m"", ""legal_risk"": ""Yes"", ""fraud_risk"": ""No data available""}",45,test
