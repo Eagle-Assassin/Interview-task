@@ -16,8 +16,8 @@ def preprocess_getstructrureddata(path):
         records=pd.read_csv(path) #"data/InterviewTask/AI/records.csv"
         print("Data loaded successfully")
 
-        # #load the model class
-        # llm=GetFromLlm()
+        #load the model class
+        llm=GetFromLlm()
         
         # #Initialize a list to store the lists of  output from the llm as a single row
         # col_data=[]
@@ -27,9 +27,9 @@ def preprocess_getstructrureddata(path):
             
 
         #     #prepare the input data for prompt
-        #     input_data= f"caseid:{records['case_id'].loc[i]}; Summary: {records['free_text_summary'].loc[i]}; handler_notes : {records['free_text_summary'].loc[i]}; historical outcome: {records['historical_outcome'].loc[i]}"
+        #     input_data= f"caseid:{records['case_id'].loc[i]}; Summary: {records['free_text_summary'].loc[i]}; handler_notes : {records['free_text_summary'].loc[i]}; historical outcome: {records['historical_outcome'].loc[i]}; has attachment:  {records['attachments_present'].loc[i]} "
             
-        #     print(input_data)
+        #     # print(input_data)
             
         #     #llm call to retrieve the generated results
         #     try:
@@ -37,7 +37,7 @@ def preprocess_getstructrureddata(path):
         #         print(f"row {i} data sent to LLM for structured extraction ")
         #     except Exception as E:
         #         print(f"row {i} data extraction failed due to {E}")   
-        #     print(data)
+        #     # print(data)
         #     col_data.append(data)
 
             
@@ -97,5 +97,5 @@ def preprocess_getstructrureddata(path):
         records_copy['attachments_present']=records_copy['attachments_present'].apply(covert_to_yesno)
         print("Data Preprocessed successfully")
 
-        records_copy.to_csv('data/pre-processeddata/preprocessed_data.csv')
+        records_copy.to_csv('data/pre-processeddata/preprocessed_data.csv',index=False)
         print("Preprocessed data saved to local successfully")

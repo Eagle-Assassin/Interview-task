@@ -67,93 +67,138 @@ class HistoricalOutcome(str, Enum):
 
 class ClaimInput(BaseModel):
     case_id: str = Field(
-        description="Unique identifier for the claim or case, used for tracking and correlation."
+        description="Unique identifier for the claim or case, used for tracking, joins, and auditability."
     )
 
     client_segment: ClientSegment = Field(
-        description="Client size category, used to estimate scale of financial and operational exposure."
+        description="Client size category (SMB, Mid-Market, Enterprise) used to estimate scale of exposure and escalation sensitivity."
     )
 
     jurisdiction: Jurisdiction = Field(
-        description="Primary jurisdiction whose legal and regulatory framework applies to the claim."
+        description="Primary legal or regulatory jurisdiction governing the claim, influencing regulatory risk and legal complexity."
     )
 
     service_line: ServiceLine = Field(
-        description="Service area responsible for handling the claim, indicating level of legal or operational exposure."
+        description="Service line responsible for handling the claim (Legal, Insurance, Advisory), used as a risk multiplier."
     )
 
     claim_value_band: ClaimValueBand = Field(
-        description="Estimated financial value of the claim expressed as a predefined monetary range."
+        description="Estimated financial exposure of the claim expressed as a predefined value band."
     )
 
     attachments_present: YesNo = Field(
-        description="Indicates whether supporting documents or evidence have been provided with the claim."
+        description="Indicates whether supporting documents or evidence were provided at intake."
     )
 
     historical_outcome: HistoricalOutcome = Field(
-        description="Previously recorded outcome of the claim, if it has already been processed or reviewed."
+        description="Previously recorded or known outcome of the claim, if available, used only for analysis and calibration."
     )
 
+    # ── Core LLM-extracted risk signals ────────────────────
+
     severe_legal_or_regulatory_risk: YesNoUnknown = Field(
-        description="Indicates whether the claim poses significant legal or regulatory exposure such as fines, penalties, or statutory breaches."
+        description="Indicates severe legal or regulatory exposure such as regulator investigations, enforcement actions, court injunctions, or statutory breaches."
     )
 
     business_critical_impact: YesNoUnknown = Field(
-        description="Indicates whether the incident has caused or may cause major business disruption, such as ransomware or system outages."
+        description="Indicates business-critical impact including major operational disruption, ransomware incidents, or threats to core business continuity."
     )
 
     potential_fraud: YesNoUnknown = Field(
-        description="Indicates presence of indicators suggesting possible fraud or intentional misrepresentation."
+        description="Indicates presence of fraud risk signals such as suspicious activity, misrepresentation, staged incidents, or police involvement."
     )
 
     conflicting_information: YesNoUnknown = Field(
-        description="Indicates whether claim details contain inconsistencies or contradictions across sources."
+        description="Indicates conflicting or inconsistent information across summaries, timelines, handler notes, or supporting documents."
     )
 
     complex_incident_details: YesNoUnknown = Field(
-        description="Indicates whether the incident details are technically or procedurally complex and require expert interpretation."
+        description="Indicates incidents with technical, multi-party, or layered complexity requiring expert or specialist interpretation."
     )
 
     policy_interpretation_issues: YesNoUnknown = Field(
-        description="Indicates whether policy wording is ambiguous or requires interpretation to determine coverage."
+        description="Indicates ambiguity or uncertainty in policy wording, coverage scope, governing law, or applicability of terms."
     )
 
     legal_disputes: YesNoUnknown = Field(
-        description="Indicates whether the claim involves ongoing or potential legal disputes or litigation."
+        description="Indicates actual or potential legal disputes, including breach of contract, employment disputes, IP claims, or litigation risk."
     )
 
     jurisdictional_complexity: YesNoUnknown = Field(
-        description="Indicates whether the claim spans multiple jurisdictions or involves complex legal boundaries."
+        description="Indicates cross-border, multi-jurisdictional, or legally complex jurisdictional considerations."
     )
 
     coverage_terms_unclear: YesNoUnknown = Field(
-        description="Indicates whether coverage terms are unclear, incomplete, or insufficient to assess eligibility."
+        description="Indicates unclear or insufficiently defined coverage terms that prevent confident eligibility assessment."
     )
 
     exclusions_may_apply: YesNoUnknown = Field(
-        description="Indicates whether policy exclusions may limit or deny coverage for this claim."
+        description="Indicates potential applicability of policy exclusions such as wear and tear, flood zones, deliberate acts, or prior losses."
     )
 
     new_or_unusual_claim_type: YesNoUnknown = Field(
-        description="Indicates whether the claim represents a rare, novel, or previously unseen claim type."
-    )
-
-    no_legal_or_fraud_concerns: YesNoUnknown = Field(
-        description="Indicates explicit confirmation that no legal, regulatory, or fraud-related concerns are present."
+        description="Indicates a rare, novel, or unusual claim type that does not follow standard historical patterns."
     )
 
     unclear_incident_description: YesNoUnknown = Field(
-        description="Indicates whether the incident description lacks clarity, detail, or sufficient context."
+        description="Indicates vague, incomplete, or poorly structured incident descriptions that limit assessment quality."
     )
 
     claim_invalid_or_fraudulent: YesNoUnknown = Field(
-        description="Indicates whether the claim appears invalid, fraudulent, or intentionally misleading."
+        description="Indicates the claim may be invalid, non-covered, or intentionally misleading based on available information."
     )
 
     required_conditions_not_met: YesNoUnknown = Field(
-        description="Indicates whether mandatory policy conditions or procedural requirements have not been satisfied."
+        description="Indicates mandatory policy or procedural conditions have not been met, such as missing notifications or required documentation."
     )
 
-    risk_summary: str = Field(
-        description="Free-text summary describing the key risk factors, context, and concerns identified for the claim."
+    # ── Keyword-driven operational extraction flags ───────
+
+    has_regulator_involvement: YesNoUnknown = Field(
+        description=(
+            "Indicates regulator or regulatory authority involvement or expectation. "
+            "Derived from phrases such as 'regulator visit', 'regulator engagement', "
+            "'regulatory review', 'FCA', 'SEC', or 'data protection authority'."
+        )
     )
+
+    has_cross_border_elements: YesNoUnknown = Field(
+        description=(
+            "Indicates cross-border or international elements. "
+            "Derived from phrases such as 'cross-border', 'overseas elements', "
+            "'foreign jurisdiction', or 'governing law unclear'."
+        )
+    )
+
+    has_time_sensitivity: YesNoUnknown = Field(
+        description=(
+            "Indicates urgency or time sensitivity. "
+            "Derived from phrases such as 'urgent', 'time-sensitive', 'injunction', "
+            "'limitation period', or 'immediate action required'."
+        )
+    )
+
+    has_missing_documentation: YesNoUnknown = Field(
+        description=(
+            "Indicates missing or incomplete documentation. "
+            "Derived from phrases such as 'no policy documents', "
+            "'evidence not supplied', 'attachments missing', or 'documents awaited'."
+        )
+    )
+
+    mentions_fraud_or_arson: YesNoUnknown = Field(
+        description=(
+            "Indicates mentions of fraud, arson, or criminal activity. "
+            "Derived from phrases such as 'arson', 'fraud', 'class action', "
+            "'police reference', 'theft', or 'criminal investigation'."
+        )
+    )
+
+    # ── Free-text rationale ───────────────────────────────
+
+    risk_summary: str = Field(
+        description="Concise 1–2 sentence plain-English explanation summarizing the primary risk drivers and escalation factors."
+    )
+
+    class Config:
+        extra = "forbid"
