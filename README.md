@@ -35,8 +35,8 @@ The system ingests structured and unstructured case data, extracts risk signals 
 ├── src/
 │   ├── triage/
 │   │   ├── cli.py                    # CLI entry point
-│   │   ├── ingest.py                 # Validation + preprocessing
-│   │   ├── validate.py               # CSV schema & empty checks
+│   │   ├── ingest.py                 # CSV schema preprocessing and extract signals using LLM
+│   │   ├── validate.py               # Evaluate predictions against gold data and generate performance reports
 │   │   ├── features.py               # LLM signal aggregation
 │   │   ├── model.py                  # LLM extraction logic
 │   │   ├── predict.py                # Risk scoring & triage logic
@@ -83,6 +83,7 @@ Using uv (preferred):
 ```bash
 uv venv
 source .venv/bin/activate
+uv pip install -e .
 uv sync
 ```
 
