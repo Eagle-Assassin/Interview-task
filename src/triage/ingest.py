@@ -6,6 +6,7 @@ from pydantic import ValidationError,BaseModel, Field
 from src.schema.riskcalculatorinput import YesNo,ClientSegment,Jurisdiction,ServiceLine,HistoricalOutcome,ClaimValueBand
 from pathlib import Path
 
+print("test")
 warnings.filterwarnings(
     "ignore",
     message="A value is trying to be set on a copy of a DataFrame",
