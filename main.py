@@ -3,4 +3,4 @@ import pandas as pd
 
     
 
-run_pipeline("data/InterviewTask/AI/gold_records.csv",None,'output')
+run_pipeline("data/InterviewTask/AI/gold_records.csv",None,'outputs')

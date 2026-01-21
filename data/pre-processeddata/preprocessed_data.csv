@@ -1,201 +1,201 @@
-case_id,client_segment,jurisdiction,service_line,claim_value_band,attachments_present,historical_outcome
-C-00192,SMB,UK,Advisory,50k-250k,yes,Accepted
-C-00265,SMB,EU,Legal,50k-250k,No,Accepted
-C-00289,SMB,UK,Advisory,>1m,No,Escalated
-C-00337,SMB,US,Insurance,50k-250k,yes,Settled
-C-00724,SMB,US,Insurance,250k-1m,yes,Unknown
-C-00751,SMB,Other,Legal,Unknown,yes,Unknown
-C-00796,Mid-Market,UK,Legal,>1m,yes,Unknown
-C-01000,Mid-Market,EU,Insurance,>1m,yes,Unknown
-C-01002,SMB,UK,Insurance,250k-1m,No,Accepted
-C-01027,Mid-Market,UK,Insurance,<50k,yes,Settled
-C-01043,Mid-Market,EU,Insurance,250k-1m,yes,Rejected
-C-01250,Mid-Market,UK,Insurance,Unknown,No,Unknown
-C-01253,Enterprise,UK,Legal,>1m,yes,Unknown
-C-01491,Mid-Market,UK,Insurance,50k-250k,yes,Unknown
-C-01628,Mid-Market,US,Legal,250k-1m,yes,Escalated
-C-01697,SMB,EU,Legal,<50k,yes,Unknown
-C-01838,Enterprise,EU,Insurance,250k-1m,yes,Accepted
-C-01929,Enterprise,Other,Insurance,50k-250k,yes,Accepted
-C-02183,Enterprise,UK,Insurance,>1m,yes,Escalated
-C-02227,Mid-Market,US,Insurance,50k-250k,yes,Unknown
-C-02257,Mid-Market,US,Insurance,<50k,yes,Unknown
-C-02428,SMB,UK,Insurance,50k-250k,yes,Unknown
-C-02430,SMB,UK,Advisory,<50k,yes,Unknown
-C-02467,SMB,UK,Legal,>1m,yes,Unknown
-C-02509,Mid-Market,UK,Insurance,>1m,No,Unknown
-C-02568,SMB,US,Legal,>1m,No,Settled
-C-02646,Mid-Market,Other,Legal,50k-250k,yes,Accepted
-C-02719,SMB,US,Insurance,250k-1m,No,Unknown
-C-02743,SMB,UK,Legal,50k-250k,yes,Escalated
-C-02868,SMB,UK,Advisory,50k-250k,No,Unknown
-C-02875,Enterprise,No data Available,Advisory,>1m,No,Escalated
-C-02914,SMB,EU,Insurance,250k-1m,No,Accepted
-C-03059,SMB,UK,Advisory,<50k,yes,Accepted
-C-03208,Mid-Market,UK,Legal,250k-1m,yes,Accepted
-C-03240,SMB,EU,Insurance,250k-1m,yes,Accepted
-C-03290,SMB,EU,Advisory,<50k,yes,Unknown
-C-03321,Mid-Market,UK,Legal,250k-1m,No,Unknown
-C-03411,Mid-Market,US,Advisory,50k-250k,No,Escalated
-C-03432,SMB,UK,Legal,50k-250k,yes,Unknown
-C-03459,SMB,US,Insurance,50k-250k,yes,Unknown
-C-03464,SMB,US,Insurance,250k-1m,yes,Unknown
-C-03470,Mid-Market,UK,Advisory,250k-1m,No,Accepted
-C-03560,Enterprise,UK,Advisory,250k-1m,yes,Unknown
-C-03568,Mid-Market,UK,Legal,250k-1m,yes,Escalated
-C-03691,SMB,Other,Insurance,>1m,yes,Escalated
-C-04003,SMB,UK,Insurance,250k-1m,yes,Rejected
-C-04146,Enterprise,Other,Legal,50k-250k,No,Unknown
-C-04216,Enterprise,US,Insurance,250k-1m,yes,Unknown
-C-04571,Mid-Market,US,Insurance,>1m,yes,Unknown
-C-04580,Enterprise,EU,Advisory,50k-250k,No,Rejected
-C-04657,Enterprise,UK,Advisory,>1m,No,Escalated
-C-04968,SMB,UK,Insurance,250k-1m,No,Unknown
-C-05023,SMB,Other,Legal,50k-250k,yes,Unknown
-C-05030,SMB,UK,Insurance,>1m,yes,Settled
-C-05062,Enterprise,EU,Legal,50k-250k,yes,Rejected
-C-05122,Mid-Market,UK,Insurance,>1m,yes,Accepted
-C-05369,Mid-Market,UK,Insurance,<50k,yes,Unknown
-C-05409,Enterprise,UK,Legal,<50k,yes,Unknown
-C-05523,Mid-Market,UK,Insurance,250k-1m,yes,Accepted
-C-05550,Enterprise,UK,Insurance,<50k,yes,Unknown
-C-05609,Mid-Market,EU,Legal,250k-1m,yes,Escalated
-C-05843,No data Available,UK,Insurance,50k-250k,No,Unknown
-C-06138,SMB,US,Legal,250k-1m,yes,Accepted
-C-06198,SMB,UK,Insurance,250k-1m,yes,Accepted
-C-06376,SMB,EU,Advisory,50k-250k,No,Unknown
-C-06398,SMB,UK,Insurance,50k-250k,No,Escalated
-C-06638,SMB,UK,Legal,<50k,yes,Accepted
-C-06679,Mid-Market,UK,Advisory,250k-1m,No,Unknown
-C-06884,Mid-Market,US,Insurance,<50k,yes,Unknown
-C-06945,Enterprise,US,Insurance,<50k,No,Unknown
-C-06982,Mid-Market,EU,Advisory,>1m,yes,Unknown
-C-07018,SMB,UK,Advisory,>1m,No,Accepted
-C-07101,Enterprise,UK,Legal,250k-1m,yes,Accepted
-C-07116,Mid-Market,UK,Insurance,<50k,No,Rejected
-C-07183,SMB,Other,Insurance,<50k,No,Accepted
-C-07290,Enterprise,UK,Insurance,50k-250k,yes,Accepted
-C-07452,SMB,UK,Legal,50k-250k,yes,Rejected
-C-07499,Enterprise,EU,Insurance,50k-250k,yes,Unknown
-C-07565,SMB,EU,Legal,<50k,yes,Rejected
-C-07583,Enterprise,EU,Insurance,250k-1m,yes,Rejected
-C-07881,SMB,EU,Advisory,50k-250k,yes,Unknown
-C-07976,SMB,UK,Insurance,250k-1m,yes,Rejected
-C-08066,Enterprise,UK,Legal,>1m,yes,Accepted
-C-08131,Enterprise,Other,Insurance,50k-250k,yes,Escalated
-C-08249,SMB,Other,Insurance,250k-1m,yes,Settled
-C-08251,Enterprise,UK,Insurance,250k-1m,yes,Unknown
-C-08253,Mid-Market,US,Insurance,250k-1m,yes,Accepted
-C-08279,SMB,US,Insurance,>1m,No,Unknown
-C-08305,SMB,UK,Insurance,50k-250k,yes,Rejected
-C-08355,Enterprise,UK,Insurance,Unknown,No,Escalated
-C-08388,SMB,UK,Insurance,<50k,No,Unknown
-C-08426,SMB,EU,Insurance,250k-1m,yes,Accepted
-C-08557,Mid-Market,UK,Advisory,<50k,No,Unknown
-C-08587,Mid-Market,UK,Legal,50k-250k,yes,Accepted
-C-08588,No data Available,EU,Legal,250k-1m,yes,Escalated
-C-08681,Mid-Market,UK,Advisory,>1m,yes,Escalated
-C-08799,SMB,EU,Insurance,50k-250k,No,Unknown
-C-08816,Enterprise,US,Insurance,<50k,yes,Rejected
-C-08943,Mid-Market,Other,Insurance,250k-1m,yes,Rejected
-C-09129,Mid-Market,EU,Insurance,Unknown,yes,Unknown
-C-09160,Enterprise,EU,Legal,>1m,yes,Settled
-C-09247,SMB,UK,Legal,250k-1m,yes,Accepted
-C-09319,Mid-Market,EU,Insurance,<50k,No,Rejected
-C-09460,Mid-Market,UK,Insurance,>1m,No,Escalated
-C-09468,SMB,UK,Legal,>1m,yes,Accepted
-C-09634,SMB,EU,Advisory,250k-1m,yes,Accepted
-C-09826,Enterprise,UK,Legal,<50k,yes,Unknown
-C-09848,SMB,US,Legal,>1m,yes,Unknown
-C-09875,Mid-Market,UK,Legal,>1m,No,Escalated
-C-09887,SMB,UK,Insurance,250k-1m,yes,Unknown
-C-10102,Mid-Market,US,Legal,250k-1m,yes,Unknown
-C-10116,Enterprise,US,Insurance,50k-250k,No,Accepted
-C-10144,SMB,US,Insurance,>1m,No,Escalated
-C-10205,Mid-Market,UK,Advisory,250k-1m,yes,Unknown
-C-10237,Mid-Market,No data Available,Legal,50k-250k,yes,Settled
-C-10304,SMB,UK,Insurance,250k-1m,No,Accepted
-C-10343,Mid-Market,US,Legal,250k-1m,No,Unknown
-C-10582,Mid-Market,UK,Insurance,<50k,yes,Settled
-C-10593,Mid-Market,UK,Insurance,<50k,No,Unknown
-C-10731,SMB,UK,Legal,250k-1m,yes,Escalated
-C-10838,Mid-Market,UK,Advisory,250k-1m,No,Accepted
-C-10852,SMB,EU,Advisory,250k-1m,yes,Accepted
-C-10974,SMB,US,Legal,<50k,yes,Accepted
-C-10975,Mid-Market,UK,Insurance,>1m,yes,Unknown
-C-11036,Enterprise,UK,Insurance,Unknown,yes,Rejected
-C-11242,Mid-Market,UK,Advisory,>1m,yes,Unknown
-C-11306,SMB,US,Legal,50k-250k,No,Unknown
-C-11652,Mid-Market,Other,Insurance,250k-1m,No,Unknown
-C-11694,SMB,Other,Insurance,<50k,yes,Accepted
-C-11833,Mid-Market,EU,Legal,<50k,yes,Unknown
-C-11851,Enterprise,US,Insurance,<50k,yes,Unknown
-C-11894,SMB,Other,Insurance,<50k,No,Unknown
-C-11926,Enterprise,Other,Insurance,250k-1m,No,Escalated
-C-12029,Enterprise,UK,No data Available,<50k,yes,Unknown
-C-12035,SMB,UK,Insurance,250k-1m,yes,Unknown
-C-12168,Enterprise,UK,Insurance,250k-1m,yes,Unknown
-C-12663,Mid-Market,US,Insurance,>1m,yes,Escalated
-C-12773,Mid-Market,UK,Insurance,50k-250k,No,Rejected
-C-12788,SMB,UK,Legal,250k-1m,yes,Unknown
-C-12806,Mid-Market,UK,Legal,50k-250k,yes,Accepted
-C-12901,SMB,US,Insurance,<50k,yes,Settled
-C-12980,SMB,UK,Legal,250k-1m,yes,Escalated
-C-13156,Mid-Market,Other,Insurance,50k-250k,No,Escalated
-C-13167,Enterprise,UK,Legal,>1m,yes,Unknown
-C-13199,SMB,EU,Insurance,<50k,No,Unknown
-C-13405,Enterprise,US,Legal,250k-1m,yes,Settled
-C-13440,Enterprise,US,Legal,250k-1m,yes,Unknown
-C-14225,SMB,UK,Advisory,50k-250k,No,Rejected
-C-14236,Mid-Market,EU,Legal,250k-1m,yes,Escalated
-C-14241,Mid-Market,EU,Advisory,250k-1m,No,Unknown
-C-14273,SMB,Other,Insurance,<50k,yes,Settled
-C-14276,SMB,UK,Legal,50k-250k,yes,Accepted
-C-14284,Mid-Market,US,Advisory,<50k,yes,Accepted
-C-14592,SMB,US,Insurance,250k-1m,No,Escalated
-C-14606,SMB,UK,Legal,250k-1m,No,Unknown
-C-14765,Mid-Market,UK,Advisory,250k-1m,yes,Rejected
-C-14778,SMB,UK,Legal,50k-250k,No,Unknown
-C-14831,Mid-Market,US,Insurance,<50k,yes,Accepted
-C-14977,Enterprise,UK,Insurance,50k-250k,No,Accepted
-C-15003,Mid-Market,Other,Insurance,250k-1m,yes,Unknown
-C-15114,SMB,EU,Insurance,250k-1m,No,Accepted
-C-15166,SMB,EU,Insurance,50k-250k,No,Unknown
-C-15171,SMB,EU,Legal,50k-250k,yes,Unknown
-C-15350,Mid-Market,UK,Insurance,<50k,No,Unknown
-C-15368,SMB,EU,Insurance,250k-1m,yes,Accepted
-C-15653,SMB,UK,Legal,250k-1m,yes,Accepted
-C-15951,Mid-Market,US,Legal,<50k,yes,Unknown
-C-16335,SMB,UK,Legal,250k-1m,yes,Unknown
-C-16405,SMB,EU,Legal,<50k,No,Accepted
-C-16634,SMB,UK,Insurance,<50k,No,Unknown
-C-16858,SMB,Other,Insurance,250k-1m,yes,Accepted
-C-16902,SMB,UK,Insurance,<50k,yes,Accepted
-C-17015,SMB,Other,Legal,Unknown,yes,Rejected
-C-17028,Mid-Market,UK,Advisory,>1m,yes,Escalated
-C-17171,SMB,UK,Legal,250k-1m,No,Unknown
-C-17224,Mid-Market,US,Legal,250k-1m,No,Unknown
-C-17360,Enterprise,Other,Insurance,250k-1m,yes,Escalated
-C-17661,SMB,UK,Insurance,<50k,yes,Unknown
-C-17898,SMB,UK,Insurance,50k-250k,yes,Unknown
-C-18367,Enterprise,EU,Insurance,50k-250k,yes,Unknown
-C-18541,Enterprise,UK,Advisory,>1m,yes,Escalated
-C-18543,SMB,EU,Advisory,<50k,No,Unknown
-C-18573,SMB,UK,Insurance,<50k,No,Rejected
-C-18607,SMB,US,Insurance,250k-1m,yes,Unknown
-C-18790,SMB,UK,Legal,50k-250k,No,Unknown
-C-18900,SMB,UK,Advisory,50k-250k,No,Unknown
-C-18932,SMB,UK,Legal,<50k,No,Unknown
-C-19078,SMB,Other,No data Available,250k-1m,yes,Unknown
-C-19176,Mid-Market,UK,Insurance,50k-250k,No,Unknown
-C-19227,Mid-Market,UK,Legal,>1m,yes,Settled
-C-19258,Mid-Market,UK,Insurance,50k-250k,yes,Unknown
-C-19468,Enterprise,US,Insurance,<50k,yes,Accepted
-C-19474,SMB,UK,Insurance,>1m,No,Escalated
-C-19543,SMB,US,Advisory,50k-250k,No,Unknown
-C-19557,Enterprise,EU,Insurance,>1m,yes,Accepted
-C-19750,Mid-Market,UK,Insurance,250k-1m,No,Settled
-C-19799,SMB,US,Legal,50k-250k,No,Unknown
-C-19895,Mid-Market,US,Insurance,50k-250k,yes,Rejected
-C-19912,Enterprise,EU,Advisory,Unknown,No,Accepted
-C-20000,Mid-Market,EU,Legal,>1m,yes,Unknown
+case_id,client_segment,jurisdiction,service_line,claim_value_band,attachments_present,historical_outcome,free_text_summary,handler_notes
+C-00192,SMB,UK,Advisory,50k-250k,Yes,Accepted,Operational risk assessment requested. Timeline not specified.,Handler flagged missing attachments. Clarify scope and deliverables.
+C-00265,SMB,EU,Legal,50k-250k,No,Accepted,Employment dispute raised by former contractor. Evidence currently limited. No policy documents attached. Conflicting information reported by client.,Duplicate of earlier report suspected.
+C-00289,SMB,UK,Advisory,>1m,No,Escalated,Client seeks decision support on risk controls. Regulator engagement anticipated. regulator visit.,Handler flagged missing attachments.
+C-00337,SMB,US,Insurance,50k-250k,Yes,Settled,Incident reported at commercial premises. Theft of equipment reported. storm damage. Police reference number provided.,"Potential conflict in dates, needs review."
+C-00724,SMB,US,Insurance,250k-1m,Yes,Unknown,Business interruption may apply. Basement affected. ip infringement.,No data Available
+C-00751,SMB,Other,Legal,Unknown,Yes,Unknown,Employment dispute raised by former contractor. Multiple parties named. Police reference number provided.,Duplicate of earlier report suspected.
+C-00796,Mid-Market,UK,Legal,>1m,Yes,Unknown,Dispute escalated to legal threat. Evidence currently limited. injunction. Supporting documents attached. Conflicting information reported by client.,No additional notes.
+C-01000,Mid-Market,EU,Insurance,>1m,Yes,Unknown,Client reports storm-related damage. Fire damage to warehouse. subsidence.,No additional notes.
+C-01002,SMB,UK,Insurance,250k-1m,No,Accepted,Damage reported following heavy rainfall. Theft of equipment reported. flood zone 3. No policy documents attached.,"Potential conflict in dates, needs review."
+C-01027,Mid-Market,UK,Insurance,<50k,Yes,Settled,Incident reported at commercial premises. Basement affected. low value. Loss adjuster appointed.,"Potential conflict in dates, needs review. Check coverage exclusions."
+C-01043,Mid-Market,EU,Insurance,250k-1m,Yes,Rejected,Damage reported following heavy rainfall. Roof compromised. flood zone.,Handler flagged missing attachments.
+C-01250,Mid-Market,UK,Insurance,Unknown,No,Unknown,Loss event impacting property and contents. Fire damage to warehouse. small crack.,"Potential conflict in dates, needs review."
+C-01253,Enterprise,UK,Legal,>1m,Yes,Unknown,Dispute escalated to legal threat. Evidence currently limited. prior losses. Loss adjuster appointed.,Caller sounded uncertain; follow-up likely required. Consider limitation periods.
+C-01491,Mid-Market,UK,Insurance,50k-250k,Yes,Unknown,Damage reported following heavy rainfall. Basement affected. Policy schedule attached. Overseas elements present.,Handler flagged missing attachments.
+C-01628,Mid-Market,US,Legal,250k-1m,Yes,Escalated,Dispute escalated to legal threat. Multiple parties named. regulator visit. Policy schedule attached.,Handler flagged missing attachments.
+C-01697,SMB,EU,Legal,<50k,Yes,Unknown,Dispute escalated to legal threat. Governing law unclear. Police reference number provided.,No data Available
+C-01838,Enterprise,EU,Insurance,250k-1m,Yes,Accepted,Client reports storm-related damage. Roof compromised. data protection incident.,Duplicate of earlier report suspected.
+C-01929,Enterprise,Other,Insurance,50k-250k,Yes,Accepted,Client reports storm-related damage. Basement affected. storm damage.,No data Available
+C-02183,Enterprise,UK,Insurance,>1m,Yes,Escalated,Client reports storm-related damage. Theft of equipment reported. hurricane. Supporting documents attached.,No additional notes. Check coverage exclusions.
+C-02227,Mid-Market,US,Insurance,50k-250k,Yes,Unknown,Client reports storm-related damage. Fire damage to warehouse. Policy schedule attached.,No data Available
+C-02257,Mid-Market,US,Insurance,<50k,Yes,Unknown,Damage reported following heavy rainfall. Theft of equipment reported. small crack. Loss adjuster appointed.,No data Available
+C-02428,SMB,UK,Insurance,50k-250k,Yes,Unknown,Business interruption may apply. Fire damage to warehouse. flood zone. Loss adjuster appointed.,Client requested urgent callback.
+C-02430,SMB,UK,Advisory,<50k,Yes,Unknown,Strategic risk review requested following acquisition. Stakeholders across multiple regions. Policy schedule attached.,Caller sounded uncertain; follow-up likely required.
+C-02467,SMB,UK,Legal,>1m,Yes,Unknown,Dispute escalated to legal threat. Jurisdiction disputed. flood zone 3.,Client requested urgent callback. Consider limitation periods.
+C-02509,Mid-Market,UK,Insurance,>1m,No,Unknown,Client reports storm-related damage. Basement affected. Evidence not yet supplied.,"Potential conflict in dates, needs review."
+C-02568,SMB,US,Legal,>1m,No,Settled,Dispute escalated to legal threat. Jurisdiction disputed. No policy documents attached.,Duplicate of earlier report suspected.
+C-02646,Mid-Market,Other,Legal,50k-250k,Yes,Accepted,Dispute escalated to legal threat. Governing law unclear. Cross-border considerations likely.,Client requested urgent callback. Consider limitation periods.
+C-02719,SMB,US,Insurance,250k-1m,No,Unknown,Client reports storm-related damage. Basement affected. No supporting documentation provided.,No data Available
+C-02743,SMB,UK,Legal,50k-250k,Yes,Escalated,Formal letter received from counterparty. Multiple parties named. breach of contract. Jurisdiction noted as UK.,Handler flagged missing attachments.
+C-02868,SMB,UK,Advisory,50k-250k,No,Unknown,Client seeks decision support on risk controls. No immediate dispute. No supporting documentation provided. Conflicting information reported by client.,No data Available
+C-02875,Enterprise,No data Available,Advisory,>1m,No,Escalated,Strategic risk review requested following acquisition. Regulator engagement anticipated. No policy documents attached.,Client requested urgent callback.
+C-02914,SMB,EU,Insurance,250k-1m,No,Accepted,Damage reported following heavy rainfall. Water ingress noted. data protection incident. No supporting documentation provided.,No data Available
+C-03059,SMB,UK,Advisory,<50k,Yes,Accepted,Client seeks decision support on risk controls. No immediate dispute. no supporting documentation. Police reference number provided.,"Potential conflict in dates, needs review."
+C-03208,Mid-Market,UK,Legal,250k-1m,Yes,Accepted,Employment dispute raised by former contractor. Multiple parties named. breach of contract. Jurisdiction noted as UK.,No data Available
+C-03240,SMB,EU,Insurance,250k-1m,Yes,Accepted,Loss event impacting property and contents. Fire damage to warehouse. regulator visit. Police reference number provided.,Client requested urgent callback. Check coverage exclusions.
+C-03290,SMB,EU,Advisory,<50k,Yes,Unknown,Strategic risk review requested following acquisition. Regulator engagement anticipated. Supporting documents attached.,No data Available
+C-03321,Mid-Market,UK,Legal,250k-1m,No,Unknown,Employment dispute raised by former contractor. Jurisdiction disputed. regulator visit.,Client requested urgent callback.
+C-03411,Mid-Market,US,Advisory,50k-250k,No,Escalated,Client requesting advice on regulatory exposure. Stakeholders across multiple regions. governing law unclear.,Caller sounded uncertain; follow-up likely required.
+C-03432,SMB,UK,Legal,50k-250k,Yes,Unknown,Formal letter received from counterparty. Time-sensitive response required.,No data Available
+C-03459,SMB,US,Insurance,50k-250k,Yes,Unknown,Loss event impacting property and contents. Theft of equipment reported. Loss adjuster appointed. Conflicting information reported by client.,Client requested urgent callback.
+C-03464,SMB,US,Insurance,250k-1m,Yes,Unknown,Loss event impacting property and contents. Basement affected. Policy schedule attached.,No additional notes.
+C-03470,Mid-Market,UK,Advisory,250k-1m,No,Accepted,Strategic risk review requested following acquisition. Regulator engagement anticipated. injunction. Cross-border considerations likely.,No data Available
+C-03560,Enterprise,UK,Advisory,250k-1m,Yes,Unknown,Operational risk assessment requested. Timeline not specified. hurricane. Overseas elements present.,Client requested urgent callback.
+C-03568,Mid-Market,UK,Legal,250k-1m,Yes,Escalated,Potential breach of contract raised. Governing law unclear. subsidence. Conflicting information reported by client.,Caller sounded uncertain; follow-up likely required. Consider limitation periods.
+C-03691,SMB,Other,Insurance,>1m,Yes,Escalated,Client reports storm-related damage. Roof compromised. regulator visit.,Duplicate of earlier report suspected.
+C-04003,SMB,UK,Insurance,250k-1m,Yes,Rejected,Client reports storm-related damage. Theft of equipment reported. suspected arson. Cross-border considerations likely.,No additional notes. Check coverage exclusions.
+C-04146,Enterprise,Other,Legal,50k-250k,No,Unknown,Dispute escalated to legal threat. Time-sensitive response required. flood zone 3. Overseas elements present.,No data Available
+C-04216,Enterprise,US,Insurance,250k-1m,Yes,Unknown,Loss event impacting property and contents. Fire damage to warehouse. regulator visit.,"Potential conflict in dates, needs review."
+C-04571,Mid-Market,US,Insurance,>1m,Yes,Unknown,Damage reported following heavy rainfall. Roof compromised. Loss adjuster appointed.,Caller sounded uncertain; follow-up likely required. Check coverage exclusions.
+C-04580,Enterprise,EU,Advisory,50k-250k,No,Rejected,Client seeks decision support on risk controls. Scope unclear.,No additional notes.
+C-04657,Enterprise,UK,Advisory,>1m,No,Escalated,Request for compliance gap analysis. Scope unclear. Evidence not yet supplied.,Client requested urgent callback.
+C-04968,SMB,UK,Insurance,250k-1m,No,Unknown,Business interruption may apply. Roof compromised. ip infringement. No supporting documentation provided.,"Potential conflict in dates, needs review. Check coverage exclusions."
+C-05023,SMB,Other,Legal,50k-250k,Yes,Unknown,Dispute escalated to legal threat. Governing law unclear. business interruption.,No data Available
+C-05030,SMB,UK,Insurance,>1m,Yes,Settled,Business interruption may apply. Fire damage to warehouse.,No data Available
+C-05062,Enterprise,EU,Legal,50k-250k,Yes,Rejected,Formal letter received from counterparty. Multiple parties named. breach of contract. Supporting documents attached. Overseas elements present.,No data Available
+C-05122,Mid-Market,UK,Insurance,>1m,Yes,Accepted,Damage reported following heavy rainfall. Theft of equipment reported.,Client requested urgent callback.
+C-05369,Mid-Market,UK,Insurance,<50k,Yes,Unknown,Client reports storm-related damage. Water ingress noted. Police reference number provided.,No data Available
+C-05409,Enterprise,UK,Legal,<50k,Yes,Unknown,Employment dispute raised by former contractor. Jurisdiction disputed. low value.,Client requested urgent callback.
+C-05523,Mid-Market,UK,Insurance,250k-1m,Yes,Accepted,Client reports storm-related damage. Fire damage to warehouse.,Handler flagged missing attachments. Check coverage exclusions.
+C-05550,Enterprise,UK,Insurance,<50k,Yes,Unknown,Business interruption may apply. Water ingress noted.,Duplicate of earlier report suspected.
+C-05609,Mid-Market,EU,Legal,250k-1m,Yes,Escalated,Employment dispute raised by former contractor. Time-sensitive response required. Loss adjuster appointed.,Caller sounded uncertain; follow-up likely required. Consider limitation periods.
+C-05843,No data Available,UK,Insurance,50k-250k,No,Unknown,Loss event impacting property and contents. Fire damage to warehouse. storm damage.,No data Available
+C-06138,SMB,US,Legal,250k-1m,Yes,Accepted,IP infringement allegation received. Governing law unclear. Cross-border considerations likely. Conflicting information reported by client.,Handler flagged missing attachments. Consider limitation periods.
+C-06198,SMB,UK,Insurance,250k-1m,Yes,Accepted,Client reports storm-related damage. Basement affected. suspected arson. Loss adjuster appointed.,No additional notes.
+C-06376,SMB,EU,Advisory,50k-250k,No,Unknown,Strategic risk review requested following acquisition. Regulator engagement anticipated. Evidence not yet supplied. Cross-border considerations likely.,Duplicate of earlier report suspected.
+C-06398,SMB,UK,Insurance,50k-250k,No,Escalated,Damage reported following heavy rainfall. Water ingress noted. storm damage.,Caller sounded uncertain; follow-up likely required.
+C-06638,SMB,UK,Legal,<50k,Yes,Accepted,Employment dispute raised by former contractor. Governing law unclear. Policy schedule attached.,No data Available
+C-06679,Mid-Market,UK,Advisory,250k-1m,No,Unknown,Client seeks decision support on risk controls. No immediate dispute. injunction.,"Potential conflict in dates, needs review."
+C-06884,Mid-Market,US,Insurance,<50k,Yes,Unknown,Business interruption may apply. Water ingress noted. small crack. Loss adjuster appointed.,No data Available
+C-06945,Enterprise,US,Insurance,<50k,No,Unknown,Business interruption may apply. Theft of equipment reported. small crack. No supporting documentation provided.,Client requested urgent callback. Check coverage exclusions.
+C-06982,Mid-Market,EU,Advisory,>1m,Yes,Unknown,Client seeks decision support on risk controls. Scope unclear. Policy schedule attached.,No additional notes.
+C-07018,SMB,UK,Advisory,>1m,No,Accepted,Client requesting advice on regulatory exposure. Regulator engagement anticipated. No policy documents attached.,"Potential conflict in dates, needs review."
+C-07101,Enterprise,UK,Legal,250k-1m,Yes,Accepted,Dispute escalated to legal threat. Evidence currently limited. flood zone 3.,No data Available
+C-07116,Mid-Market,UK,Insurance,<50k,No,Rejected,Loss event impacting property and contents. Roof compromised. minor.,No data Available
+C-07183,SMB,Other,Insurance,<50k,No,Accepted,Loss event impacting property and contents. Basement affected. No supporting documentation provided.,Duplicate of earlier report suspected.
+C-07290,Enterprise,UK,Insurance,50k-250k,Yes,Accepted,Damage reported following heavy rainfall. Water ingress noted.,No data Available
+C-07452,SMB,UK,Legal,50k-250k,Yes,Rejected,Formal letter received from counterparty. Multiple parties named. Loss adjuster appointed.,Client requested urgent callback.
+C-07499,Enterprise,EU,Insurance,50k-250k,Yes,Unknown,Incident reported at commercial premises. Fire damage to warehouse. flood zone.,"Potential conflict in dates, needs review. Check coverage exclusions."
+C-07565,SMB,EU,Legal,<50k,Yes,Rejected,Employment dispute raised by former contractor. Multiple parties named. Overseas elements present.,No data Available
+C-07583,Enterprise,EU,Insurance,250k-1m,Yes,Rejected,Business interruption may apply. Basement affected. storm damage. Policy schedule attached. Jurisdiction noted as EU.,Caller sounded uncertain; follow-up likely required. Check coverage exclusions.
+C-07881,SMB,EU,Advisory,50k-250k,Yes,Unknown,Operational risk assessment requested. Timeline not specified. ip infringement. Police reference number provided.,Duplicate of earlier report suspected.
+C-07976,SMB,UK,Insurance,250k-1m,Yes,Rejected,Business interruption may apply. Basement affected. Jurisdiction noted as UK.,Duplicate of earlier report suspected. Check coverage exclusions.
+C-08066,Enterprise,UK,Legal,>1m,Yes,Accepted,Formal letter received from counterparty. Time-sensitive response required. data protection incident. Policy schedule attached. Overseas elements present.,No additional notes. Consider limitation periods.
+C-08131,Enterprise,Other,Insurance,50k-250k,Yes,Escalated,Client reports storm-related damage. Basement affected. governing law unclear. Policy schedule attached. Overseas elements present.,Handler flagged missing attachments.
+C-08249,SMB,Other,Insurance,250k-1m,Yes,Settled,Client reports storm-related damage. Basement affected.,Handler flagged missing attachments.
+C-08251,Enterprise,UK,Insurance,250k-1m,Yes,Unknown,Damage reported following heavy rainfall. Basement affected. suspected arson.,Handler flagged missing attachments. Check coverage exclusions.
+C-08253,Mid-Market,US,Insurance,250k-1m,Yes,Accepted,Damage reported following heavy rainfall. Fire damage to warehouse. breach of contract.,Caller sounded uncertain; follow-up likely required. Check coverage exclusions.
+C-08279,SMB,US,Insurance,>1m,No,Unknown,Business interruption may apply. Theft of equipment reported. governing law unclear.,No data Available
+C-08305,SMB,UK,Insurance,50k-250k,Yes,Rejected,Incident reported at commercial premises. Theft of equipment reported. governing law unclear. Cross-border considerations likely.,Duplicate of earlier report suspected.
+C-08355,Enterprise,UK,Insurance,Unknown,No,Escalated,Damage reported following heavy rainfall ..  Fire damage to warehouse ..  No policy documents attached .. ,No data Available
+C-08388,SMB,UK,Insurance,<50k,No,Unknown,Damage reported following heavy rainfall. Fire damage to warehouse. No supporting documentation provided.,"Potential conflict in dates, needs review."
+C-08426,SMB,EU,Insurance,250k-1m,Yes,Accepted,Damage reported following heavy rainfall. Water ingress noted. subsidence. Police reference number provided.,No additional notes.
+C-08557,Mid-Market,UK,Advisory,<50k,No,Unknown,Operational risk assessment requested. No immediate dispute. minor. No policy documents attached.,Duplicate of earlier report suspected.
+C-08587,Mid-Market,UK,Legal,50k-250k,Yes,Accepted,Dispute escalated to legal threat. Evidence currently limited. Police reference number provided.,No data Available
+C-08588,No data Available,EU,Legal,250k-1m,Yes,Escalated,IP infringement allegation received. Jurisdiction disputed. Supporting documents attached.,No data Available
+C-08681,Mid-Market,UK,Advisory,>1m,Yes,Escalated,Request for compliance gap analysis. Regulator engagement anticipated. subsidence.,"Potential conflict in dates, needs review. Clarify scope and deliverables."
+C-08799,SMB,EU,Insurance,50k-250k,No,Unknown,Incident reported at commercial premises. Fire damage to warehouse. storm damage. No policy documents attached. Conflicting information reported by client.,No data Available
+C-08816,Enterprise,US,Insurance,<50k,Yes,Rejected,Damage reported following heavy rainfall. Basement affected. low value.,No data Available
+C-08943,Mid-Market,Other,Insurance,250k-1m,Yes,Rejected,Damage reported following heavy rainfall. Fire damage to warehouse. regulator visit.,Duplicate of earlier report suspected.
+C-09129,Mid-Market,EU,Insurance,Unknown,Yes,Unknown,Client reports storm-related damage. Roof compromised. low value. Cross-border considerations likely. Conflicting information reported by client.,No data Available
+C-09160,Enterprise,EU,Legal,>1m,Yes,Settled,Potential breach of contract raised. Jurisdiction disputed. Cross-border considerations likely.,Caller sounded uncertain; follow-up likely required. Consider limitation periods.
+C-09247,SMB,UK,Legal,250k-1m,Yes,Accepted,Dispute escalated to legal threat. Time-sensitive response required. prior losses. Police reference number provided.,Client requested urgent callback. Consider limitation periods.
+C-09319,Mid-Market,EU,Insurance,<50k,No,Rejected,Incident reported at commercial premises. Basement affected. no supporting documentation. No policy documents attached.,No data Available
+C-09460,Mid-Market,UK,Insurance,>1m,No,Escalated,Incident reported at commercial premises. Roof compromised. fire. Evidence not yet supplied.,No data Available
+C-09468,SMB,UK,Legal,>1m,Yes,Accepted,Dispute escalated to legal threat. Multiple parties named. fire.,Client requested urgent callback.
+C-09634,SMB,EU,Advisory,250k-1m,Yes,Accepted,Client seeks decision support on risk controls. Regulator engagement anticipated. subsidence. Jurisdiction noted as EU.,"Potential conflict in dates, needs review."
+C-09826,Enterprise,UK,Legal,<50k,Yes,Unknown,Potential breach of contract raised. Multiple parties named. no supporting documentation.,No data Available
+C-09848,SMB,US,Legal,>1m,Yes,Unknown,Formal letter received from counterparty. Jurisdiction disputed. flood zone 3. Police reference number provided. Cross-border considerations likely.,No data Available
+C-09875,Mid-Market,UK,Legal,>1m,No,Escalated,Employment dispute raised by former contractor. Jurisdiction disputed. subsidence. Evidence not yet supplied.,No additional notes.
+C-09887,SMB,UK,Insurance,250k-1m,Yes,Unknown,Business interruption may apply. Basement affected. injunction.,Client requested urgent callback.
+C-10102,Mid-Market,US,Legal,250k-1m,Yes,Unknown,Employment dispute raised by former contractor. Jurisdiction disputed. fire. Supporting documents attached.,Client requested urgent callback.
+C-10116,Enterprise,US,Insurance,50k-250k,No,Accepted,Damage reported following heavy rainfall. Fire damage to warehouse. breach of contract. No policy documents attached. Overseas elements present.,Duplicate of earlier report suspected.
+C-10144,SMB,US,Insurance,>1m,No,Escalated,Incident reported at commercial premises. Water ingress noted. class action.,No additional notes. Check coverage exclusions.
+C-10205,Mid-Market,UK,Advisory,250k-1m,Yes,Unknown,Client requesting advice on regulatory exposure. Timeline not specified. suspected arson.,No data Available
+C-10237,Mid-Market,No data Available,Legal,50k-250k,Yes,Settled,Potential breach of contract raised. Jurisdiction disputed. Jurisdiction noted as UK.,Duplicate of earlier report suspected.
+C-10304,SMB,UK,Insurance,250k-1m,No,Accepted,Loss event impacting property and contents. Basement affected. No policy documents attached.,No additional notes.
+C-10343,Mid-Market,US,Legal,250k-1m,No,Unknown,Formal letter received from counterparty. Evidence currently limited. fire.,Duplicate of earlier report suspected. Consider limitation periods.
+C-10582,Mid-Market,UK,Insurance,<50k,Yes,Settled,Damage reported following heavy rainfall. Roof compromised. wear and tear. Jurisdiction noted as UK.,Handler flagged missing attachments.
+C-10593,Mid-Market,UK,Insurance,<50k,No,Unknown,Business interruption may apply. Basement affected.,Handler flagged missing attachments. Check coverage exclusions.
+C-10731,SMB,UK,Legal,250k-1m,Yes,Escalated,IP infringement allegation received. Jurisdiction disputed. major fire. Jurisdiction noted as UK.,Handler flagged missing attachments.
+C-10838,Mid-Market,UK,Advisory,250k-1m,No,Accepted,Client seeks decision support on risk controls. Regulator engagement anticipated. arson. Evidence not yet supplied.,Client requested urgent callback. Clarify scope and deliverables.
+C-10852,SMB,EU,Advisory,250k-1m,Yes,Accepted,Client seeks decision support on risk controls. Scope unclear. subsidence. Loss adjuster appointed. Cross-border considerations likely.,No data Available
+C-10974,SMB,US,Legal,<50k,Yes,Accepted,Formal letter received from counterparty. Evidence currently limited. no supporting documentation. Police reference number provided.,Handler flagged missing attachments.
+C-10975,Mid-Market,UK,Insurance,>1m,Yes,Unknown,Damage reported following heavy rainfall. Basement affected. Police reference number provided.,No data Available
+C-11036,Enterprise,UK,Insurance,Unknown,Yes,Rejected,Client reports storm-related damage. Fire damage to warehouse. no supporting documentation. Police reference number provided.,Client requested urgent callback.
+C-11242,Mid-Market,UK,Advisory,>1m,Yes,Unknown,Operational risk assessment requested. Regulator engagement anticipated. fire. Policy schedule attached.,No data Available
+C-11306,SMB,US,Legal,50k-250k,No,Unknown,Potential breach of contract raised. Governing law unclear. ip infringement.,No data Available
+C-11652,Mid-Market,Other,Insurance,250k-1m,No,Unknown,Client reports storm-related damage. Basement affected. major fire.,"Potential conflict in dates, needs review."
+C-11694,SMB,Other,Insurance,<50k,Yes,Accepted,Incident reported at commercial premises. Fire damage to warehouse. no supporting documentation. Policy schedule attached. Jurisdiction noted as Other.,No data Available
+C-11833,Mid-Market,EU,Legal,<50k,Yes,Unknown,Formal letter received from counterparty. Time-sensitive response required. Policy schedule attached. Overseas elements present.,No additional notes.
+C-11851,Enterprise,US,Insurance,<50k,Yes,Unknown,Business interruption may apply. Water ingress noted. Police reference number provided.,"Potential conflict in dates, needs review."
+C-11894,SMB,Other,Insurance,<50k,No,Unknown,Client reports storm-related damage. Fire damage to warehouse.,Client requested urgent callback.
+C-11926,Enterprise,Other,Insurance,250k-1m,No,Escalated,Loss event impacting property and contents. Water ingress noted. governing law unclear. Evidence not yet supplied.,Client requested urgent callback.
+C-12029,Enterprise,UK,No data Available,<50k,Yes,Unknown,Formal letter received from counterparty. Time-sensitive response required. Police reference number provided.,No data Available
+C-12035,SMB,UK,Insurance,250k-1m,Yes,Unknown,Business interruption may apply. Basement affected. Overseas elements present.,No additional notes.
+C-12168,Enterprise,UK,Insurance,250k-1m,Yes,Unknown,Incident reported at commercial premises. Basement affected. Jurisdiction noted as UK.,"Potential conflict in dates, needs review."
+C-12663,Mid-Market,US,Insurance,>1m,Yes,Escalated,Loss event impacting property and contents. Basement affected. subsidence. Police reference number provided. Overseas elements present.,Duplicate of earlier report suspected. Check coverage exclusions.
+C-12773,Mid-Market,UK,Insurance,50k-250k,No,Rejected,Damage reported following heavy rainfall. Water ingress noted. ip infringement. No policy documents attached. Conflicting information reported by client.,No data Available
+C-12788,SMB,UK,Legal,250k-1m,Yes,Unknown,Employment dispute raised by former contractor. Evidence currently limited. Policy schedule attached.,Caller sounded uncertain; follow-up likely required.
+C-12806,Mid-Market,UK,Legal,50k-250k,Yes,Accepted,Employment dispute raised by former contractor. Governing law unclear. Police reference number provided. Cross-border considerations likely.,Handler flagged missing attachments.
+C-12901,SMB,US,Insurance,<50k,Yes,Settled,Loss event impacting property and contents. Water ingress noted. minor.,No data Available
+C-12980,SMB,UK,Legal,250k-1m,Yes,Escalated,Employment dispute raised by former contractor. Evidence currently limited. injunction.,No data Available
+C-13156,Mid-Market,Other,Insurance,50k-250k,No,Escalated,Client reports storm-related damage. Theft of equipment reported. breach of contract.,Duplicate of earlier report suspected. Check coverage exclusions.
+C-13167,Enterprise,UK,Legal,>1m,Yes,Unknown,Employment dispute raised by former contractor. Multiple parties named.,Handler flagged missing attachments.
+C-13199,SMB,EU,Insurance,<50k,No,Unknown,Business interruption may apply. Roof compromised. minor. Evidence not yet supplied.,No data Available
+C-13405,Enterprise,US,Legal,250k-1m,Yes,Settled,potential breach of contract raised. govening law unclear.,No data Available
+C-13440,Enterprise,US,Legal,250k-1m,Yes,Unknown,Potential breach of contract raised. Jurisdiction disputed. hurricane.,No additional notes.
+C-14225,SMB,UK,Advisory,50k-250k,No,Rejected,Client seeks decision support on risk controls. Stakeholders across multiple regions. No supporting documentation provided.,Duplicate of earlier report suspected.
+C-14236,Mid-Market,EU,Legal,250k-1m,Yes,Escalated,Employment dispute raised by former contractor. Governing law unclear.,Caller sounded uncertain; follow-up likely required.
+C-14241,Mid-Market,EU,Advisory,250k-1m,No,Unknown,Client requesting advice on regulatory exposure. Regulator engagement anticipated.,No data Available
+C-14273,SMB,Other,Insurance,<50k,Yes,Settled,Loss event impacting property and contents. Theft of equipment reported.,Caller sounded uncertain; follow-up likely required.
+C-14276,SMB,UK,Legal,50k-250k,Yes,Accepted,Formal letter received from counterparty. Time-sensitive response required. prior losses. Cross-border considerations likely.,Client requested urgent callback.
+C-14284,Mid-Market,US,Advisory,<50k,Yes,Accepted,Client requesting advice on regulatory exposure. No immediate dispute.,No data Available
+C-14592,SMB,US,Insurance,250k-1m,No,Escalated,Business interruption may apply. Theft of equipment reported. arson. No supporting documentation provided. Cross-border considerations likely.,Handler flagged missing attachments.
+C-14606,SMB,UK,Legal,250k-1m,No,Unknown,Employment dispute raised by former contractor. Time-sensitive response required. No supporting documentation provided.,Handler flagged missing attachments. Consider limitation periods.
+C-14765,Mid-Market,UK,Advisory,250k-1m,Yes,Rejected,Operational risk assessment requested. Regulator engagement anticipated. major fire. Police reference number provided.,No data Available
+C-14778,SMB,UK,Legal,50k-250k,No,Unknown,Potential breach of contract raised. Time-sensitive response required. storm damage.,Client requested urgent callback.
+C-14831,Mid-Market,US,Insurance,<50k,Yes,Accepted,Business interruption may apply. Basement affected.,No data Available
+C-14977,Enterprise,UK,Insurance,50k-250k,No,Accepted,Incident reported at commercial premises. Theft of equipment reported. No supporting documentation provided.,No data Available
+C-15003,Mid-Market,Other,Insurance,250k-1m,Yes,Unknown,Loss event impacting property and contents. Fire damage to warehouse. regulator visit. Supporting documents attached. Jurisdiction noted as Other.,No data Available
+C-15114,SMB,EU,Insurance,250k-1m,No,Accepted,Incident reported at commercial premises. Basement affected. injunction. Cross-border considerations likely.,Client requested urgent callback.
+C-15166,SMB,EU,Insurance,50k-250k,No,Unknown,Business interruption may apply. Basement affected. ip infringement.,Caller sounded uncertain; follow-up likely required.
+C-15171,SMB,EU,Legal,50k-250k,Yes,Unknown,Employment dispute raised by former contractor. Evidence currently limited. Loss adjuster appointed.,Caller sounded uncertain; follow-up likely required.
+C-15350,Mid-Market,UK,Insurance,<50k,No,Unknown,Business interruption may apply. Fire damage to warehouse.,Caller sounded uncertain; follow-up likely required.
+C-15368,SMB,EU,Insurance,250k-1m,Yes,Accepted,Loss event impacting property and contents. Fire damage to warehouse. prior losses. Jurisdiction noted as EU.,"Potential conflict in dates, needs review."
+C-15653,SMB,UK,Legal,250k-1m,Yes,Accepted,IP infringement allegation received. Jurisdiction disputed.,No data Available
+C-15951,Mid-Market,US,Legal,<50k,Yes,Unknown,Dispute escalated to legal threat. Jurisdiction disputed. no supporting documentation. Police reference number provided. Overseas elements present.,No data Available
+C-16335,SMB,UK,Legal,250k-1m,Yes,Unknown,Formal letter received from counterparty. Evidence currently limited. injunction. Cross-border considerations likely.,No data Available
+C-16405,SMB,EU,Legal,<50k,No,Accepted,Formal letter received from counterparty. Jurisdiction disputed. No supporting documentation provided.,No data Available
+C-16634,SMB,UK,Insurance,<50k,No,Unknown,Loss event impacting property and contents. Fire damage to warehouse.,No data Available
+C-16858,SMB,Other,Insurance,250k-1m,Yes,Accepted,Business interruption may apply. Roof compromised. data protection incident. Supporting documents attached.,No data Available
+C-16902,SMB,UK,Insurance,<50k,Yes,Accepted,Incident reported at commercial premises. Theft of equipment reported.,Caller sounded uncertain; follow-up likely required.
+C-17015,SMB,Other,Legal,Unknown,Yes,Rejected,Dispute escalated to legal threat. Time-sensitive response required. Loss adjuster appointed.,Caller sounded uncertain; follow-up likely required. Consider limitation periods.
+C-17028,Mid-Market,UK,Advisory,>1m,Yes,Escalated,Request for compliance gap analysis. Scope unclear. major fire. Jurisdiction noted as UK.,No data Available
+C-17171,SMB,UK,Legal,250k-1m,No,Unknown,Potential breach of contract raised. Jurisdiction disputed. injunction. Conflicting information reported by client.,No data Available
+C-17224,Mid-Market,US,Legal,250k-1m,No,Unknown,IP infringement allegation received. Time-sensitive response required. ip infringement. Evidence not yet supplied.,Handler flagged missing attachments.
+C-17360,Enterprise,Other,Insurance,250k-1m,Yes,Escalated,Client reports storm-related damage. Basement affected. suspected arson.,No additional notes.
+C-17661,SMB,UK,Insurance,<50k,Yes,Unknown,Damage reported following heavy rainfall. Roof compromised. Loss adjuster appointed.,Duplicate of earlier report suspected.
+C-17898,SMB,UK,Insurance,50k-250k,Yes,Unknown,Client reports storm-related damage. Fire damage to warehouse.,No data Available
+C-18367,Enterprise,EU,Insurance,50k-250k,Yes,Unknown,Incident reported at commercial premises. Fire damage to warehouse. business interruption. Police reference number provided.,No data Available
+C-18541,Enterprise,UK,Advisory,>1m,Yes,Escalated,Client requesting advice on regulatory exposure. No immediate dispute. data protection incident. Cross-border considerations likely.,Handler flagged missing attachments.
+C-18543,SMB,EU,Advisory,<50k,No,Unknown,Operational risk assessment requested. No immediate dispute. wear and tear. Evidence not yet supplied. Jurisdiction noted as EU.,No data Available
+C-18573,SMB,UK,Insurance,<50k,No,Rejected,Business interruption may apply. Roof compromised. No supporting documentation provided. Conflicting information reported by client.,No data Available
+C-18607,SMB,US,Insurance,250k-1m,Yes,Unknown,Incident reported at commercial premises. Fire damage to warehouse. Loss adjuster appointed. Overseas elements present.,No data Available
+C-18790,SMB,UK,Legal,50k-250k,No,Unknown,Potential breach of contract raised. Governing law unclear.,Handler flagged missing attachments.
+C-18900,SMB,UK,Advisory,50k-250k,No,Unknown,Client requesting advice on regulatory exposure. No immediate dispute. Jurisdiction noted as UK.,Duplicate of earlier report suspected.
+C-18932,SMB,UK,Legal,<50k,No,Unknown,Employment dispute raised by former contractor. Jurisdiction disputed. no supporting documentation. No policy documents attached. Cross-border considerations likely.,Client requested urgent callback.
+C-19078,SMB,Other,No data Available,250k-1m,Yes,Unknown,Damage reported following heavy rainfall. Roof compromised. class action. Jurisdiction noted as Other.,Client requested urgent callback.
+C-19176,Mid-Market,UK,Insurance,50k-250k,No,Unknown,Damage reported following heavy rainfall. Fire damage to warehouse. No policy documents attached. Cross-border considerations likely.,Client requested urgent callback. Check coverage exclusions.
+C-19227,Mid-Market,UK,Legal,>1m,Yes,Settled,Potential breach of contract raised. Time-sensitive response required.,"Potential conflict in dates, needs review."
+C-19258,Mid-Market,UK,Insurance,50k-250k,Yes,Unknown,Business interruption may apply. Fire damage to warehouse. Policy schedule attached.,No data Available
+C-19468,Enterprise,US,Insurance,<50k,Yes,Accepted,Business interruption may apply. Basement affected. small crack.,No additional notes.
+C-19474,SMB,UK,Insurance,>1m,No,Escalated,Business interruption may apply. Fire damage to warehouse. suspected arson. Conflicting information reported by client.,No data Available
+C-19543,SMB,US,Advisory,50k-250k,No,Unknown,Operational risk assessment requested. No immediate dispute. business interruption.,No data Available
+C-19557,Enterprise,EU,Insurance,>1m,Yes,Accepted,Business interruption may apply. Fire damage to warehouse. flood zone 3. Loss adjuster appointed.,No data Available
+C-19750,Mid-Market,UK,Insurance,250k-1m,No,Settled,Loss event impacting property and contents. Water ingress noted. No supporting documentation provided.,No data Available
+C-19799,SMB,US,Legal,50k-250k,No,Unknown,Formal letter received from counterparty. Governing law unclear.,Handler flagged missing attachments.
+C-19895,Mid-Market,US,Insurance,50k-250k,Yes,Rejected,Client reports storm-related damage. Roof compromised.,No additional notes.
+C-19912,Enterprise,EU,Advisory,Unknown,No,Accepted,Operational risk assessment requested. Timeline not specified. small crack.,Client requested urgent callback. Clarify scope and deliverables.
+C-20000,Mid-Market,EU,Legal,>1m,Yes,Unknown,Potential breach of contract raised. Evidence currently limited. subsidence. Cross-border considerations likely.,Caller sounded uncertain; follow-up likely required.
