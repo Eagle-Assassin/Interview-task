@@ -43,3 +43,10 @@ package-dir = {"" = "src"}
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore::FutureWarning",
+    "ignore::pydantic.PydanticDeprecatedSince20",
+]

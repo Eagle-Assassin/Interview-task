@@ -4,6 +4,7 @@ import warnings
 from src.triage.model import GetFromLlm
 from pydantic import ValidationError,BaseModel, Field
 from src.schema.riskcalculatorinput import YesNo,ClientSegment,Jurisdiction,ServiceLine,HistoricalOutcome,ClaimValueBand
+from pathlib import Path
 
 warnings.filterwarnings(
     "ignore",
@@ -57,16 +58,25 @@ class ClaimInput(BaseModel):
 
 
 def validate_and_clean_csv(input_path: str) -> pd.DataFrame:
+
     logger.info("Starting CSV validation | path=%s", input_path)
 
     # ---------- Load ----------
-    df = pd.read_csv(input_path)
+    try:
+        df = pd.read_csv(input_path)
+        logger.info("CSV loaded | rows=%d | cols=%d", *df.shape)
+    except pd.errors.EmptyDataError:
+        logger.error(
+            "CSV validation failed: file is empty or has no header | path=%s",
+            input_path,
+        )
+        raise EmptyDatasetError("CSV file is empty")
 
     if df.empty:
         logger.error("Input CSV is empty | path=%s", input_path)
         raise EmptyDatasetError("Input dataset is empty")
 
-    logger.info("CSV loaded | rows=%d | cols=%d", *df.shape)
+    
 
     df.drop(["received_at"],axis=1,inplace=True)
 
@@ -163,6 +173,8 @@ def preprocess_getstructrureddata(path: str) -> None:
     # -------------------------------------------------
     # LLM extraction loop
     # -------------------------------------------------
+    #Create the path if not aviaable -for pytest
+    Path("data/llmdata").mkdir(parents=True, exist_ok=True)
     for i in range(len(records)):
         logger.info(f"Executing row {i}")
         input_data = (
@@ -235,6 +247,7 @@ def preprocess_getstructrureddata(path: str) -> None:
     # -------------------------------------------------
     # Save preprocessed dataset
     # -------------------------------------------------
+    Path("data/pre-processeddata").mkdir(parents=True, exist_ok=True)
     output_path = "data/pre-processeddata/preprocessed_data.csv"
     records.to_csv(output_path, index=False)
 

@@ -7,7 +7,6 @@ from schema.riskcalculatorinput import ClaimInput
 from triage.ingest import preprocess_getstructrureddata
 from src.triage.model import GetFromLlm
 from src.triage.features import process_features
-from tests.model_rf import use_modelprediction
 from src.triage.validate import evaluation
 
 logger = logging.getLogger(__name__)
