@@ -1,0 +1,10 @@
+case_id,received_at,client_segment,jurisdiction,service_line,claim_value_band,attachments_present,free_text_summary,handler_notes,historical_outcome
+C-00001,2024-11-05T12:07:00+00:00,SMB,UK,Legal,<50k,true,Employment dispute raised by former contractor. Multiple parties named. Policy schedule attached.,,Settled
+C-00002,2024-10-30T22:48:53+00:00,SMB,US,Insurance,<50k,true,Business interruption may apply. Roof compromised. no supporting documentation.,"Potential conflict in dates, needs review.",Accepted
+C-00003,2024-11-03T08:21:22+00:00,SMB,US,Insurance,<50k,true,Loss event impacting property and contents. Water ingress noted. Loss adjuster appointed. Overseas elements present.,No additional notes. Check coverage exclusions.,Rejected
+C-00004,2024-10-07T07:27:39+00:00,Mid-Market,UK,Insurance,<50k,false,Damage reported following heavy rainfall. Water ingress noted.,Caller sounded uncertain; follow-up likely required.,Rejected
+C-00005,2024-10-27T23:24:43+00:00,SMB,test,Insurance,<50k,test,Incident reported at commercial premises. Fire damage to warehouse. Loss adjuster appointed.,,Unknown
+C-00006,2024-12-07T00:58:00+00:00,SMB,UK,Insurance,50k-250k,false,Business interruption may apply. Theft of equipment reported.,Handler flagged missing attachments.,Unknown
+C-00007,2024-10-15T16:28:22+00:00,SMB,UK,Insurance,<50k,true,Business interruption may apply. Basement affected. Jurisdiction noted as UK.,Client requested urgent callback.,Unknown
+C-00008,2024-12-07T04:36:32+00:00,test,UK,Legal,250k-1m,true,Dispute escalated to legal threat. Evidence currently limited. storm damage. Policy schedule attached.,Client requested urgent callback.,Unknown
+C-00009,2024-10-24T05:48:49+00:00,Mid-Market,EU,Legal,250k-1m,true,IP infringement allegation received. Jurisdiction disputed. ip infringement. Policy schedule attached.,Handler flagged missing attachments.,Settled

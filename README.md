@@ -98,14 +98,13 @@ OPENAI_API_KEY=your_openai_api_key_here
 ### Full End-to-End Run
 
 ```bash
-python -m triage run \
-  --input data/InterviewTask/AI/records.csv \
-  --gold data/InterviewTask/AI/gold_cases.csv \
-  --outdir outputs
+
+python -m triage run   --input data/InterviewTask/AI/gold_records.csv   --gold data/InterviewTask/AI/gold_cases.csv   --outdir outputs
+
 ```
 
 ### What this command does
-This command run the **complete insurance claim triage workflow**, including data validation, feature extraction, risk scoring, priority assignment, action recommendation, and evaluation against gold labels.
+This command run the **complete insurance claim triage workflow**, including data validation, feature extraction, risk scoring, priority assignment, action recommendation, and evaluation against gold labels. (runs only the gold cases from the records)
 
 ---
 
