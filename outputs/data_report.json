@@ -1,0 +1,49 @@
+{
+  "input_path": "data/InterviewTask/AI/gold_records.csv",
+  "rows_loaded": 200,
+  "rows_after_caseid_filter": 200,
+  "invalid_rows": 0,
+  "missingness": {
+    "case_id": {
+      "missing_count": 0,
+      "missing_pct": 0.0
+    },
+    "received_at": {
+      "missing_count": 0,
+      "missing_pct": 0.0
+    },
+    "client_segment": {
+      "missing_count": 2,
+      "missing_pct": 0.01
+    },
+    "jurisdiction": {
+      "missing_count": 2,
+      "missing_pct": 0.01
+    },
+    "service_line": {
+      "missing_count": 2,
+      "missing_pct": 0.01
+    },
+    "claim_value_band": {
+      "missing_count": 0,
+      "missing_pct": 0.0
+    },
+    "attachments_present": {
+      "missing_count": 0,
+      "missing_pct": 0.0
+    },
+    "free_text_summary": {
+      "missing_count": 0,
+      "missing_pct": 0.0
+    },
+    "handler_notes": {
+      "missing_count": 71,
+      "missing_pct": 0.355
+    },
+    "historical_outcome": {
+      "missing_count": 0,
+      "missing_pct": 0.0
+    }
+  },
+  "anomalies": []
+}

@@ -41,7 +41,7 @@ def main():
 
     run_parser.add_argument(
         "--outdir",
-        required=True,
+        default="outputs",
         help="Directory to write outputs"
     )
 

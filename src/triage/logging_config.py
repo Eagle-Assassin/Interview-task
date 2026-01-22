@@ -28,7 +28,7 @@ def setup_logging(log_level: str = "INFO", log_dir: str = "logs") -> None:
     )
     file_handler.setFormatter(formatter)
 
-    # 🔴 IMPORTANT: clear existing handlers (prevents duplicates)
+    # IMPORTANT: clear existing handlers (prevents duplicates)
     root_logger = logging.getLogger()
     root_logger.handlers.clear()
 
