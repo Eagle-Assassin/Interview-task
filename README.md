@@ -86,7 +86,11 @@ source .venv/bin/activate
 uv pip install -e .
 uv sync
 ```
+Please ensure you have a .env file in the project root directory with a valid OpenAI API key before running the pipeline.
 
+```bash
+OPENAI_API_KEY=your_openai_api_key_here
+```
 ---
 
 ## Running the Pipeline
@@ -103,7 +107,9 @@ python -m triage run \
 ### What this command does
 This command run the **complete insurance claim triage workflow**, including data validation, feature extraction, risk scoring, priority assignment, action recommendation, and evaluation against gold labels.
 
-### Step-by-step execution flow
+---
+
+## Step-by-step execution flow
 
 ### 1. CSV validation & cleaning
 
@@ -148,7 +154,7 @@ outputs/eval_report.md
 
 ```
 
-### Command-line arguments
+## Command-line arguments
 
 | Argument   | Description                                                                         |
 | ---------- | ----------------------------------------------------------------------------------- |
@@ -308,9 +314,10 @@ The decision logic is based on static, manually encoded rules.
  -  Requires manual updates when business logic evolves
 
 ### Impact
-    -  Rules may become outdated
-    -  Edge cases may be misclassified
-    -  Maintenance cost increases over time
+
+  -  Rules may become outdated
+  -  Edge cases may be misclassified
+  -  Maintenance cost increases over time
 
 ## 2. Heavy Dependence on Signal Quality
 
