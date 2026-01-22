@@ -10,14 +10,14 @@ It was built as part of an interview task to demonstrate:
 - Evaluation against gold labels
 - Clean engineering practices (CLI, logging, testing, reproducibility)
 
-The system ingests structured and unstructured case data, extracts risk signals (optionally via LLM), computes a calibrated risk score, assigns priority and actions, and produces evaluation artefacts.
+The system ingests structured and unstructured case data, extracts risk signals  using LLM, computes a calibrated risk score, assigns priority and actions, and produces evaluation artefacts.
 
 ---
 
 ## Key Capabilities
 
 - ✅ CSV schema validation & empty-dataset detection  
-- ✅ Sensible default handling for missing data  
+- ✅ Sensible default handling for missing data and generate data report
 - ✅ Deterministic risk scoring & explainable triage logic  
 - ✅ Priority (P0–P3) & action prediction  
 - ✅ Confidence estimation  
@@ -44,10 +44,10 @@ The system ingests structured and unstructured case data, extracts risk signals 
 │   │   └── __main__.py
 │   └── schema/
 │       ├── modeloutput.py            # LLM output schema (Pydantic)
-│       └── riskcalculatorinput.py
+│       └── riskcalculatorinput.py    # Risk calculator schema (Pydantic)
 │
 ├── data/
-│   ├── InterviewTask/AI/
+│   ├── InterviewTask/AI/            # Store the data and task details
 │   │   ├── records.csv
 │   │   ├── gold_cases.csv
 │   │   └── DataDictionary.md
@@ -55,7 +55,7 @@ The system ingests structured and unstructured case data, extracts risk signals 
 │   ├── pre-processeddata/
 │   └── processeddata/
 │
-├── outputs/
+├── outputs/                        
 │   ├── predictions.csv
 │   └── eval_report.md
 │
@@ -100,15 +100,73 @@ python -m triage run \
   --outdir outputs
 ```
 
+### What this command does
+This command run the **complete insurance claim triage workflow**, including data validation, feature extraction, risk scoring, priority assignment, action recommendation, and evaluation against gold labels.
+
+### Step-by-step execution flow
+
+### 1. CSV validation & cleaning
+
+- Validates the input dataset schema and enums
+- Checks for empty or invalid datasets
+- Normalizes missing values (e.g., client segment, jurisdiction, attachments)
+
+### 2. LLM-based signal extraction
+
+- Sends free-text summaries and handler notes to the LLM
+- Extracts structured risk signals (legal risk, fraud indicators, ambiguity, etc.)
+- Persists intermediate LLM outputs for traceability
+
+### 3. Feature engineering
+
+- Merges structured input data with extracted LLM signals
+- Produces a single processed feature table for scoring
+
+### 4. Risk scoring & triage
+
+- Computes a calibrated risk score (0–1)
+- Assigns a priority level (P0–P3)
+- Determines the recommended handling action
+- Generates confidence and rationale for each decision
+
+### 5. Prediction outputs
+
+- Writes predictions to:
+```bash
+outputs/predictions.csv
+```
+
+### 6. Evaluation against gold data (optional)
+
+- If --gold is provided:
+    -   Compares predicted priorities and actions to expected values
+    -   Computes accuracy, macro-F1, and confusion matrices
+    -   Saves a detailed evaluation report to:
+```bash
+
+outputs/eval_report.md
+
+```
+
+### Command-line arguments
+
+| Argument   | Description                                                                         |
+| ---------- | ----------------------------------------------------------------------------------- |
+| `--input`  | Path to the raw claims CSV file                                                     |
+| `--gold`   | *(Optional)* Path to gold labels for evaluation                                     |
+| `--outdir` | *(Optional)* Directory where predictions and reports are saved defaulted to outputs |
+
 ---
 
 ## Outputs Generated
 
-| File                      | Description                         |
-| :------------------------ | :---------------------------------- |
-| `outputs/predictions.csv` | Final triage outputs per case       |
-| `outputs/eval_report.md`  | Evaluation metrics & error analysis |
-| `logs/triage.log`         | Execution logs                      |
+| File / Path                    | Description                                                     |
+| :----------------------------- | :-------------------------------------------------------------- |
+| `outputs/predictions.csv`      | Final triage results per case (priority, action, risk, etc.)    |
+| `outputs/eval_report.md`       | Evaluation metrics, confusion matrix, and failure analysis      |
+| `outputs/data_report.md`       | Data quality report (missingness, anomalies, schema issues)     |
+| `logs/triage.log`              | Execution logs for validation, LLM calls, and scoring           |
+
 
 ---
 
@@ -153,52 +211,7 @@ Actions are determined deterministically from risk signals and priority.
 
 ---
 
-## Triage Logic (High Level)
-
-### 1. Validation
-
-- Required columns
-- Enum constraints
-- Empty CSV detection
-
-### 2. Preprocessing
-
-- Missing values filled with sensible defaults
-- Boolean normalization
-- Data quality checks
-
-### 3. Signal Extraction
-
-- LLM-assisted structured extraction (optional)
-- Batch-safe, cached CSV outputs
-
-### 4. Risk Scoring
-
-Weighted combination of:
-
-- Legal/fraud signals
-- Operational risk
-- Jurisdiction & service line
-- Claim value & client segment
-
-Score bounded to [0.0, 1.0]
-
-### 5. Priority & Action Mapping
-
-- Threshold-based priority assignment
-- Priority-aware action logic
-
-### 6. Confidence Estimation
-
-- Penalized by missing data & uncertainty flags
-
----
-
-## Evaluation
-
-Evaluation is run automatically when `--gold` is supplied.
-
-### Metrics Produced
+## Metrics Produced
 
 - Priority accuracy
 - Macro-F1 score
@@ -236,53 +249,164 @@ pytest -v
 
 ---
 
-## Design Decisions & Trade-offs
+## Action Framework Derivation & Trade-offs
 
-### Why deterministic logic?
+The action framework used in this system is not arbitrary.
+It was systematically derived by studying the gold_results.csv and identifying consistent patterns that led to specific operational actions.
 
-- Ensures explainability
-- Easier to audit and debug
-- Suitable as a baseline before ML/LLM escalation
+The process followed three deliberate steps:
 
-### Why confidence score?
+- Study gold outcomes to understand why specific actions were taken
+- Map those actions to observable signals in structured + unstructured data
+- Encode the logic deterministically, with LLMs used only for signal extraction—not decision-making
 
-- Enables downstream manual review gating
-- Reflects data quality, not just model certainty
+### How Actions Were Derived  
 
-### Why optional LLM usage?
+### Step 1: Gold Case Analysis
 
-- Structured extraction from free text improves signal richness
-- Pipeline still functions without LLM dependency
+- Each action in `gold_cases.csv` was analyzed alongside:
+  - Risk signals
+  - Claim context
+  - Free-text summaries
+  - Outcomes
+- This revealed repeatable patterns linking certain signals to specific actions.
+
+
+### Step 2: LLM-Assisted Signal Extraction
+
+- LLMs were used only to:
+  - Convert free-text summaries,historical_outcomes,attachment_present and handler notes a into structured flags
+  - Extract indicators such as fraud mentions, legal risk, ambiguity, urgency, and documentation gaps
+
+
+### Step 3: Deterministic Rule-Based Action Assignment
+
+- Once signals were extracted, pure deterministic logic was applied to derive:
+  - Priority (P0–P3)
+  - Recommended action
+  - Risk Score
+  - confidence
+- This ensures:
+  - Full explainability
+  - Auditability
+  - Repeatable outputs
+---
+
+## Limitations & Drawbacks of the Current Design
+
+## 1. Rule-Based Logic Is Rigid
+
+### Limitation
+
+The decision logic is based on static, manually encoded rules.
+
+ -  Cannot adapt automatically to:
+    -  New claim patterns
+    -  Emerging fraud tactics
+    -  Shifts in regulatory interpretation
+
+ -  Requires manual updates when business logic evolves
+
+### Impact
+    -  Rules may become outdated
+    -  Edge cases may be misclassified
+    -  Maintenance cost increases over time
+
+## 2. Heavy Dependence on Signal Quality
+
+### Limitation
+
+The system assumes that extracted signals are accurate and complete.
+
+  - If the LLM:
+    - Misses a signal
+    - Misinterprets ambiguous text
+    - Produces "No data available" too often
+      - the downstream decision is affected
+
+### Impact
+  - Incorrect or missing signals propagate deterministically
+  - No learning mechanism to correct mistakes
+  - “Garbage in → garbage out” effect
+
+## 3. Limited Generalization Beyond Gold Data
+
+### Limitation
+
+Rules are derived from historical gold cases.
+  - Gold data may:
+    - Be biased
+    - Be incomplete
+    - Reflect outdated practices
+
+### Impact
+
+  - Poor generalization to novel claim types
+  - New risks may not map cleanly to existing rules
+  - System mirrors past decisions, not necessarily optimal ones
+
+## 4. Dependence on LLM-Derived Rule Discovery **(Important)**
+
+### Limitation
+
+Initial rule logic was derived by analyzing gold cases with LLM assistance rather than being authored entirely from first-principles domain expertise
+
+### Impact
+
+  - Rules may reflect historical data bias rather than optimal policy intent
+  - Regulatory or business nuances might be underrepresented
+  - Requires human review, validation, and ongoing governance to ensure correctness and compliance
+
 
 ---
 
-## Known Limitations
+## Role of LLMs in This System
 
-- LLM outputs depend on prompt quality
-- Risk thresholds are heuristically tuned
-- No temporal or cross-case learning
-- No production monitoring hooks
+The system deliberately separates rule derivation from rule execution.
 
----
+## What the LLM is used for
+
+The LLM is used offline / during design time to:
+
+### 1. Analyze gold cases
+
+  - Study `gold_results.csv`
+  - Identify recurring relationships between:
+    - Risk signals
+    - Claim characteristics
+    - Final actions and priorities
+
+### 2. Propose candidate decision rules
+
+  - Suggest mappings such as:
+    - “If severe legal risk + high claim value → Immediate escalation”
+    - “If missing documentation → Request further information”
+  - Help surface implicit heuristics that human reviewers apply but do not explicitly document
+
+
+### 3. Coding Assistance
+
+The LLM is also used as a development aid, including:
+  - Assisting in writing:
+    - Python modules
+    - Validation logic
+    - Rule evaluation code
+  - Helping structure:
+    - CLI interfaces
+    - Logging patterns
+    - Test cases
+  - Supporting rapid iteration while maintaining clean, deterministic architecture
+
+All generated code is **reviewed, controlled, and executed deterministically**.
+
 
 ## What I Would Do Next
 
-- Add probability calibration using historical outcomes
-- Introduce SHAP-style explanations
+- Introduce a baseline ML model (e.g., Logistic Regression, Gradient Boosting).
 - Add FastAPI service (`POST /triage`)
 - Add monitoring for drift & low-confidence spikes
 - Replace heuristics with trained baseline ML model
-
----
-
-## How to Present This in Interview
-
-Be ready to discuss:
-
-- Data issues discovered
-- Why some failures happen
-- How confidence helps operations
-- How to productionise safely
+- Subject all LLM-proposed rules to human expert review before adoption.
 
 ---
 

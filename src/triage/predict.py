@@ -204,7 +204,7 @@ class ClaimTriageEvaluator(BaseRiskPriors):
 # Pipeline
 # =====================================================
 
-def run_pipeline(input_path: str, gold_path: str | None, outdir1: str):
+def run_pipeline(input_path: str, gold_path: str | None, outdir1= "outputs"):
 
     print("Executing....\n\n Kindly refer logs to track the progress",end="\n")
 

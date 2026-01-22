@@ -5,8 +5,9 @@ from src.triage.model import GetFromLlm
 from pydantic import ValidationError,BaseModel, Field
 from src.schema.riskcalculatorinput import YesNo,ClientSegment,Jurisdiction,ServiceLine,HistoricalOutcome,ClaimValueBand
 from pathlib import Path
+import json
 
-print("test")
+
 warnings.filterwarnings(
     "ignore",
     message="A value is trying to be set on a copy of a DataFrame",
@@ -59,29 +60,43 @@ class ClaimInput(BaseModel):
 
 
 def validate_and_clean_csv(input_path: str) -> pd.DataFrame:
-
     logger.info("Starting CSV validation | path=%s", input_path)
 
-    # ---------- Load ----------
+    report = {
+        "input_path": str(input_path),
+        "rows_loaded": 0,
+        "rows_after_caseid_filter": 0,
+        "invalid_rows": 0,
+        "missingness": {},
+        "anomalies": [],
+    }
+
+    # ---------------- Load ----------------
     try:
         df = pd.read_csv(input_path)
         logger.info("CSV loaded | rows=%d | cols=%d", *df.shape)
     except pd.errors.EmptyDataError:
-        logger.error(
-            "CSV validation failed: file is empty or has no header | path=%s",
-            input_path,
-        )
+        logger.error("CSV validation failed: file is empty | path=%s", input_path)
         raise EmptyDatasetError("CSV file is empty")
 
     if df.empty:
-        logger.error("Input CSV is empty | path=%s", input_path)
+        logger.error("Input CSV has header but no rows | path=%s", input_path)
         raise EmptyDatasetError("Input dataset is empty")
 
-    
+    report["rows_loaded"] = len(df)
 
-    df.drop(["received_at"],axis=1,inplace=True)
+    # ---------------- Missingness (pre-clean) ----------------
+    for col in df.columns:
+        missing_count = int(df[col].isna().sum())
+        report["missingness"][col] = {
+            "missing_count": missing_count,
+            "missing_pct": round(missing_count / len(df), 3),
+        }
 
-    # Normalize missing values
+    # ---------------- Normalisation ----------------
+    if "received_at" in df.columns:
+        df.drop(["received_at"], axis=1, inplace=True)
+
     df["service_line"].fillna("No data Available", inplace=True)
     df["client_segment"].fillna("No data Available", inplace=True)
     df["jurisdiction"].fillna("No data Available", inplace=True)
@@ -90,51 +105,59 @@ def validate_and_clean_csv(input_path: str) -> pd.DataFrame:
     df["historical_outcome"].fillna("Unknown", inplace=True)
     df["attachments_present"].fillna(False, inplace=True)
 
-    # Drop rows without case_id
+    # ---------------- Case ID filtering ----------------
     before = len(df)
     df.dropna(subset=["case_id"], inplace=True)
-    logger.info(
-        "Dropped rows with missing case_id | removed=%d",
-        before - len(df),
-    )
+    dropped_caseid = before - len(df)
 
-    # Normalize attachment flag
+    if dropped_caseid > 0:
+        report["anomalies"].append(
+            {
+                "type": "missing_case_id",
+                "rows_dropped": dropped_caseid,
+            }
+        )
+
+    report["rows_after_caseid_filter"] = len(df)
+
+    # ---------------- Boolean normalisation ----------------
     df["attachments_present"] = df["attachments_present"].apply(
         lambda x: "Yes" if bool(x) else "No"
     )
 
     validated_rows = []
     invalid_rows = 0
-  
 
-    # ---------- Row validation ----------
+    # ---------------- Row validation ----------------
     for idx, row in df.iterrows():
         try:
-            row = row.to_dict()
-
-            # Normalization
-            validated = ClaimInput(**row)
+            validated = ClaimInput(**row.to_dict())
             validated_rows.append(validated.model_dump())
-
         except ValidationError as e:
             invalid_rows += 1
+            report["anomalies"].append(
+                {
+                    "type": "schema_validation_error",
+                    "row_index": int(idx),
+                    "case_id": row.get("case_id"),
+                    "errors": e.errors(),
+                }
+            )
             logger.error(
-                "Row validation failed | row=%d | case_id=%s | errors=%s",
+                "Row validation failed | row=%d | case_id=%s",
                 idx,
                 row.get("case_id"),
-                e.errors(),
             )
 
-    # ---------- Post-validation empty check ----------
+    report["invalid_rows"] = invalid_rows
+
     if not validated_rows:
         logger.critical(
             "All rows invalid | total_rows=%d | invalid_rows=%d",
             len(df),
             invalid_rows,
         )
-        raise EmptyDatasetError(
-            "All rows failed validation — no data to process"
-        )
+        raise EmptyDatasetError("All rows failed validation")
 
     clean_df = pd.DataFrame(validated_rows)
 
@@ -144,10 +167,41 @@ def validate_and_clean_csv(input_path: str) -> pd.DataFrame:
         invalid_rows,
     )
 
-    print(f"\n Validation check completed, Number of rows omited :-> {invalid_rows+(before - len(df))}")
+    # ---------------- Write reports ----------------
+    output_dir = Path("outputs")
+    output_dir.mkdir(exist_ok=True)
+
+    json_path = output_dir / "data_report.json"
+    md_path = output_dir / "data_report.md"
+
+    with open(json_path, "w") as f:
+        json.dump(report, f, indent=2)
+
+    with open(md_path, "w") as f:
+        f.write("# Data Quality Report\n\n")
+        f.write(f"**Input file:** `{input_path}`\n\n")
+        f.write("## Summary\n")
+        f.write(f"- Rows loaded: {report['rows_loaded']}\n")
+        f.write(f"- Rows after case_id filter: {report['rows_after_caseid_filter']}\n")
+        f.write(f"- Invalid rows: {report['invalid_rows']}\n\n")
+
+        f.write("## Missingness\n")
+        for col, stats in report["missingness"].items():
+            f.write(
+                f"- **{col}**: {stats['missing_count']} "
+                f"({stats['missing_pct'] * 100:.1f}%)\n"
+            )
+
+        if report["anomalies"]:
+            f.write("\n## Anomalies\n")
+            for a in report["anomalies"]:
+                f.write(f"- {a['type']}: {a}\n")
+        else:
+            f.write("\n## Anomalies\n- None detected\n")
+
+    logger.info("Data quality report written | path=%s", md_path)
 
     return clean_df
-
 
 
 
