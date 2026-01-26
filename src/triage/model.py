@@ -10,6 +10,17 @@ load_dotenv()
 
 logger = logging.getLogger(__name__)
 
+def write_llm_failure_report(case_id: str | None, reason: str, outdir: str = "outputs",):
+    Path(outdir).mkdir(parents=True, exist_ok=True)
+    report_path = Path(outdir) / "data_report.md"
+
+    with open(report_path, "a") as f:
+        f.write("## LLM Failure Detected\n\n")
+        f.write(f"- Timestamp: {datetime.utcnow().isoformat()} UTC\n")
+        f.write(f"- Case ID: {case_id or 'Unknown'}\n")
+        f.write(f"- Reason: {reason}\n")
+        f.write("- Action taken: Used default / missing-safe risk signals\n\n")
+
 
 class GetFromLlm:
     def __init__(self):
@@ -79,4 +90,5 @@ class GetFromLlm:
                 "LLM invocation or parsing failed",
                 exc_info=True,
             )
+            write_llm_failure_report(input_data.split(";")[0].split(":")[1],    "LLM invocation or parsing failed -> row skipped",    "outputs",)
             raise

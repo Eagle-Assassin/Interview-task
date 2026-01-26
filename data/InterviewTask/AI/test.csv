@@ -7,4 +7,4 @@ C-00005,2024-10-27T23:24:43+00:00,SMB,test,Insurance,<50k,test,Incident reported
 C-00006,2024-12-07T00:58:00+00:00,SMB,UK,Insurance,50k-250k,false,Business interruption may apply. Theft of equipment reported.,Handler flagged missing attachments.,Unknown
 C-00007,2024-10-15T16:28:22+00:00,SMB,UK,Insurance,<50k,true,Business interruption may apply. Basement affected. Jurisdiction noted as UK.,Client requested urgent callback.,Unknown
 C-00008,2024-12-07T04:36:32+00:00,test,UK,Legal,250k-1m,true,Dispute escalated to legal threat. Evidence currently limited. storm damage. Policy schedule attached.,Client requested urgent callback.,Unknown
-C-00009,2024-10-24T05:48:49+00:00,Mid-Market,EU,Legal,250k-1m,true,IP infringement allegation received. Jurisdiction disputed. ip infringement. Policy schedule attached.,Handler flagged missing attachments.,Settled
+,2024-10-24T05:48:49+00:00,Mid-Market,EU,Legal,250k-1m,true,IP infringement allegation received. Jurisdiction disputed. ip infringement. Policy schedule attached.,Handler flagged missing attachments.,Settled

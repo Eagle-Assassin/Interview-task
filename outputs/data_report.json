@@ -1,12 +1,12 @@
 {
   "input_path": "data/InterviewTask/AI/test.csv",
   "rows_loaded": 9,
-  "rows_after_caseid_filter": 9,
+  "rows_after_caseid_filter": 8,
   "invalid_rows": 2,
   "missingness": {
     "case_id": {
-      "missing_count": 0,
-      "missing_pct": 0.0
+      "missing_count": 1,
+      "missing_pct": 0.111
     },
     "received_at": {
       "missing_count": 0,
@@ -46,6 +46,10 @@
     }
   },
   "anomalies": [
+    {
+      "type": "missing_case_id",
+      "rows_dropped": 1
+    },
     {
       "type": "schema_validation_error",
       "row_index": 4,

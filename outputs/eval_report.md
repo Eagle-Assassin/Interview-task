@@ -8,15 +8,15 @@
 - Macro F1: 0.36
 
 ## Action Metrics
-- Action accuracy: 0.40
+- Action accuracy: 0.36
 
 ## Priority Confusion Matrix
 |           |   Pred_P0 |   Pred_P1 |   Pred_P2 |   Pred_P3 |
 |:----------|----------:|----------:|----------:|----------:|
-| Actual_P0 |        24 |         9 |         6 |         1 |
-| Actual_P1 |        19 |        23 |        14 |         4 |
-| Actual_P2 |        11 |        19 |        16 |        14 |
-| Actual_P3 |         3 |         6 |        21 |        10 |
+| Actual_P0 |        23 |        11 |         6 |         0 |
+| Actual_P1 |        19 |        21 |        16 |         4 |
+| Actual_P2 |         9 |        20 |        19 |        12 |
+| Actual_P3 |         3 |         8 |        20 |         9 |
 
 ## Representative Failure Cases
 
@@ -27,57 +27,87 @@
 - Predicted action: Immediate escalation
 - Risk score: 1.0
 - Confidence: 80
-- Rationale: The claim presents severe legal risks due to a dispute that may escalate to legal actions. Jurisdictional complexities and urgency in addressing limitation periods further heighten the risk.
+- Rationale: The claim presents significant legal risks due to an escalation into legal threats, with unclear governing law and cross-border elements involved, necessitating urgent action.
 - Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
 
-### Case C-02467
+### Case C-09247
 - Gold priority: P1
 - Predicted priority: P0
-- Gold action: Escalate for coverage review
-- Predicted action: Immediate escalation
-- Risk score: 1.0
-- Confidence: 80
-- Rationale: The claim involves a legal dispute with escalated threats and jurisdictional issues, indicating severe legal risk. Time sensitivity and unclear coverage due to flood zone implications further complicate the situation.
-- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
-
-### Case C-05609
-- Gold priority: P2
-- Predicted priority: P0
-- Gold action: Proceed with standard handling
-- Predicted action: Immediate escalation
-- Risk score: 1.0
-- Confidence: 90
-- Rationale: The claim involves a time-sensitive employment dispute, requiring careful management due to potential legal exposure. A follow-up is needed due to caller uncertainty and to consider limitation periods.
-- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
-
-### Case C-15951
-- Gold priority: P3
-- Predicted priority: P0
-- Gold action: Reject claim
-- Predicted action: Immediate escalation
-- Risk score: 1.0
-- Confidence: 45
-- Rationale: The claim involves a legal dispute with jurisdictional complexity and missing documentation, indicating potential severe legal risks. The lack of supporting documentation and unclear jurisdiction raise concerns about compliance and resolution.
-- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
-
-### Case C-19078
-- Gold priority: P1
-- Predicted priority: P0
-- Gold action: Escalate for investigation
+- Gold action: Route to legal review
 - Predicted action: Escalate for investigation
 - Risk score: 1.0
 - Confidence: 90
-- Rationale: The claim involves severe legal risks due to a class action related to compromised roofing from heavy rainfall, indicating potential regulatory scrutiny. Additionally, there is urgency for client interaction as noted by the request for an urgent callback.
+- Rationale: The claim involves a legal threat with a time-sensitive response required, and it has prior losses which may indicate potential policy exclusions. There are police references mentioned, raising risk regarding the authenticity of the claim.
 - Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
 
-### Case C-11306
+### Case C-10144
+- Gold priority: P0
+- Predicted priority: P0
+- Gold action: Immediate escalation
+- Predicted action: Escalate for investigation
+- Risk score: 1.0
+- Confidence: 55
+- Rationale: The incident involves water ingress at a commercial property and has been escalated due to a class action, raising significant legal exposure risks and potential concerns regarding coverage exclusions.
+- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
+
+### Case C-09848
+- Gold priority: P0
+- Predicted priority: P0
+- Gold action: Immediate escalation
+- Predicted action: Escalate for investigation
+- Risk score: 1.0
+- Confidence: 80
+- Rationale: The claim involves a disputed jurisdiction and cross-border considerations, presenting potential fraud indicators. Additionally, the case may face policy interpretation issues and exclusions related to the flood zone.
+- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
+
+### Case C-09468
+- Gold priority: P0
+- Predicted priority: P0
+- Gold action: Immediate escalation
+- Predicted action: Escalate for investigation
+- Risk score: 1.0
+- Confidence: 90
+- Rationale: The claim involves a legal dispute with multiple parties and a threat of legal action, indicating a severe legal risk. Additionally, there is time sensitivity as the client has requested an urgent callback.
+- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
+
+### Case C-08588
 - Gold priority: P1
 - Predicted priority: P0
 - Gold action: Route to legal review
 - Predicted action: Immediate escalation
 - Risk score: 1.0
+- Confidence: 80
+- Rationale: The claim involves an IP infringement allegation with disputed jurisdiction, indicating severe legal and regulatory risk. The presence of legal disputes and cross-border elements further complicates the case.
+- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
+
+### Case C-06138
+- Gold priority: P1
+- Predicted priority: P0
+- Gold action: Route to legal review
+- Predicted action: Immediate escalation
+- Risk score: 1.0
+- Confidence: 45
+- Rationale: The claim involves an IP infringement allegation with unclear governing law and potential cross-border implications. There are conflicting reports from the client and missing documentation that may impact the validity and processing of the claim.
+- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
+
+### Case C-04146
+- Gold priority: P1
+- Predicted priority: P0
+- Gold action: Escalate for coverage review
+- Predicted action: Immediate escalation
+- Risk score: 1.0
 - Confidence: 65
-- Rationale: The claim involves a potential breach of contract and IP infringement, raising severe legal risks due to unclear governing law and legal disputes.
+- Rationale: The claim presents a severe legal risk due to an escalating legal threat and is time-sensitive. Additionally, there are jurisdictional complexities with overseas elements and potential policy exclusions related to flood zone 3.
+- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
+
+### Case C-07881
+- Gold priority: P2
+- Predicted priority: P0
+- Gold action: Route to advisory intake
+- Predicted action: Escalate for investigation
+- Risk score: 1.0
+- Confidence: 80
+- Rationale: This claim involves potential intellectual property infringement and is linked to a police reference, indicating possible legal disputes and regulatory risk. Additionally, there is suspicion of it being a duplicate report, which raises conflicting information concerns.
 - Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
 
 ### Case C-14592
@@ -86,37 +116,7 @@
 - Gold action: Escalate for investigation
 - Predicted action: Escalate for investigation
 - Risk score: 1.0
-- Confidence: 40
-- Rationale: The claim indicates a significant business interruption due to theft and arson, with potential fraudulent activity suggested; however, there is a lack of supporting documentation and unclear incident details, raising concerns about compliance with policy conditions.
-- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
-
-### Case C-12806
-- Gold priority: P2
-- Predicted priority: P0
-- Gold action: Proceed with standard handling
-- Predicted action: Escalate for investigation
-- Risk score: 1.0
-- Confidence: 55
-- Rationale: The claim involves an employment dispute with potential fraud indicators, unclear governing law, and complex jurisdictional issues. Missing attachments and regulatory involvement add to the risk profile.
-- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
-
-### Case C-12663
-- Gold priority: P0
-- Predicted priority: P0
-- Gold action: Immediate escalation
-- Predicted action: Escalate for investigation
-- Risk score: 1.0
-- Confidence: 80
-- Rationale: The claim has potential fraud indicators and conflicting information, particularly with the mention of a duplicate report. Additionally, it involves cross-border elements and may have applicable exclusions.
-- Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
-
-### Case C-16335
-- Gold priority: P1
-- Predicted priority: P0
-- Gold action: Route to legal review
-- Predicted action: Immediate escalation
-- Risk score: 1.0
-- Confidence: 80
-- Rationale: The claim involves severe legal risk due to a formal letter from a counterparty and an injunction. Additionally, there are complexities related to cross-border elements and the need for expert interpretation.
+- Confidence: 50
+- Rationale: The claim presents significant risks due to business interruption from theft and arson, with potential fraud indicators and missing documentation raising concerns about its validity.
 - Commentary: The model likely under- or over-estimated risk due to limited, ambiguous, or conflicting signals in the input.
 
