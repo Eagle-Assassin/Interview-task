@@ -292,7 +292,7 @@ def preprocess_getstructrureddata(path: str) -> None:
 
  
     # Drop unused columns
-    df.drop(
+    records.drop(
         ["free_text_summary", "handler_notes"],
         axis=1,
         inplace=True,

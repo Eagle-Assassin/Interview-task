@@ -14,15 +14,31 @@ logger = logging.getLogger(__name__)
 
 class BaseRiskPriors:
     """
-    Calibrated priors aligned with synthetic gold behaviour.
+    Explainable rule-based risk engine aligned with synthetic gold triage behaviour.
+
+    TOTAL RISK =
+        Core Severity
+      + Operational Urgency
+      + Contextual Complexity
+      + Financial Amplifier
+      - Uncertainty Penalty
+
+    Final score is clamped to [0, 1].
     """
 
+    # -----------------------------
+    # Normalisation helpers
+    # -----------------------------
     YES_NO_MAP = {
         "Yes": 1.0,
         "No": 0.0,
         "No data available": 0.25,
     }
 
+
+     # -----------------------------
+    # Contextual priors
+    # -----------------------------
     CLIENT_SEGMENT_RISK = {
         "SMB": 0.15,
         "Mid-Market": 0.30,
@@ -44,7 +60,7 @@ class BaseRiskPriors:
         "Advisory": 0.85,
         "No data Available": 1.00,
     }
-
+    
     CLAIM_VALUE_RISK = {
         "<50k": 0.10,
         "50k-250k": 0.30,
@@ -53,6 +69,9 @@ class BaseRiskPriors:
         "Unknown": 0.30,
     }
 
+     # -----------------------------
+    # Risk signal weights
+    # -----------------------------
     CORE_SIGNAL_WEIGHTS = {
         "severe_legal_or_regulatory_risk": 0.22,
         "legal_disputes": 0.18,
@@ -79,36 +98,93 @@ class BaseRiskPriors:
 
 class ClaimTriageEvaluator(BaseRiskPriors):
 
-    def calculate_risk_score(self, row: dict) -> float:
-        score = 0.0
+    # =====================================================
+    # Core calculation
+    # =====================================================
+    def calculate_risk_score(self, row: dict) -> dict:
+        logger.debug("Starting risk calculation for case_id=%s", row.get("case_id"))
 
-        for col, weight in self.CORE_SIGNAL_WEIGHTS.items():
-            score += self.YES_NO_MAP.get(row[col], 0.25) * weight
+        # -----------------------------
+        # Core Severity
+        # -----------------------------
+        core_severity = sum(
+            self.YES_NO_MAP.get(row.get(col), 0.25) * weight
+            for col, weight in self.CORE_SIGNAL_WEIGHTS.items()
+        )
 
-        for col, weight in self.OPERATIONAL_SIGNAL_WEIGHTS.items():
-            score += self.YES_NO_MAP.get(row[col], 0.25) * weight
+        # -----------------------------
+        # Operational Urgency
+        # -----------------------------
+        operational_urgency = sum(
+            self.YES_NO_MAP.get(row.get(col), 0.25) * weight
+            for col, weight in self.OPERATIONAL_SIGNAL_WEIGHTS.items()
+        )
 
-        base_jur = self.JURISDICTION_RISK[row["jurisdiction"]]
-        service_mult = self.SERVICE_LINE_MULTIPLIER[row["service_line"]]
-        score += min(base_jur * service_mult, 0.50)
+        # -----------------------------
+        # Contextual Complexity
+        # -----------------------------
+        jurisdiction_risk = self.JURISDICTION_RISK.get(
+            row.get("jurisdiction"), 0.25
+        )
+        service_multiplier = self.SERVICE_LINE_MULTIPLIER.get(
+            row.get("service_line"), 1.0
+        )
 
-        score += self.CLIENT_SEGMENT_RISK[row["client_segment"]] * 0.15
-        score += self.CLAIM_VALUE_RISK[row["claim_value_band"]] * 0.20
+        contextual_complexity = min(jurisdiction_risk * service_multiplier, 0.50)
 
-        for col in self.UNCERTAINTY_SIGNALS:
-            if row[col] == "No data available":
-                score -= 0.03
+        contextual_complexity += (
+            self.CLIENT_SEGMENT_RISK.get(row.get("client_segment"), 0.25) * 0.15
+        )
 
-        final_score = round(max(min(score, 1.0), 0.0), 2)
-        logger.debug("Risk score calculated: %s", final_score)
-        return final_score
+        # -----------------------------
+        # Financial Amplifier
+        # -----------------------------
+        financial_amplifier = (
+            self.CLAIM_VALUE_RISK.get(row.get("claim_value_band"), 0.30) * 0.20
+        )
+
+        # -----------------------------
+        # Uncertainty Penalty
+        # -----------------------------
+        uncertainty_penalty = sum(
+            0.03 for col in self.UNCERTAINTY_SIGNALS
+            if row.get(col) == "No data available"
+        )
+
+        # -----------------------------
+        # Raw + Final Risk
+        # -----------------------------
+        raw_risk = (
+            core_severity
+            + operational_urgency
+            + contextual_complexity
+            + financial_amplifier
+            - uncertainty_penalty
+        )
+
+        final_risk = round(max(min(raw_risk, 1.0), 0.0), 2)
+
+        logger.debug(
+            "Risk computed | raw=%.3f final=%.2f | breakdown=%s",
+            raw_risk,
+            final_risk,
+            json.dumps({
+                "core_severity": round(core_severity, 3),
+                "operational_urgency": round(operational_urgency, 3),
+                "contextual_complexity": round(contextual_complexity, 3),
+                "financial_amplifier": round(financial_amplifier, 3),
+                "uncertainty_penalty": round(uncertainty_penalty, 3),
+            })
+        )
+
+        return final_risk
 
     # -----------------------------------------------------
 
     def determine_priority(self, risk_score: float) -> str:
-        if risk_score >= 0.85:
+        if risk_score >= 0.81:
             priority = "P0"
-        elif risk_score >= 0.65:
+        elif risk_score >= 0.63:
             priority = "P1"
         elif risk_score >= 0.40:
             priority = "P2"
@@ -123,9 +199,8 @@ class ClaimTriageEvaluator(BaseRiskPriors):
     def determine_action(self, row: dict, risk_score: float, priority: str) -> str:
 
         if priority == "P0":
-            if row["claim_invalid_or_fraudulent"] == "Yes":
-                action = "Reject claim"
-            elif row["potential_fraud"] == "Yes" or row["mentions_fraud_or_arson"] == "Yes":
+            
+            if row["potential_fraud"] == "Yes" or row["mentions_fraud_or_arson"] == "Yes":
                 action = "Escalate for investigation"
             else:
                 action = "Immediate escalation"
@@ -148,12 +223,14 @@ class ClaimTriageEvaluator(BaseRiskPriors):
                 action = "Proceed with standard handling"
 
         else:
-            action = (
-                "Reject claim"
-                if row["claim_invalid_or_fraudulent"] == "Yes"
-                else "Proceed with standard handling"
-            )
-
+            if row["claim_invalid_or_fraudulent"] == "Yes":
+                action ="Reject claim"
+            elif (row["attachments_present"]=="No") or (row["historical_outcome"]in ["Unknown","Rejected"]):
+                action ="Request further information"
+            else :
+                action = "Proceed with standard handling"             
+                
+                
         logger.debug("Action determined: %s", action)
         return action
 
@@ -163,8 +240,11 @@ class ClaimTriageEvaluator(BaseRiskPriors):
         confidence = 90
 
         for col in self.UNCERTAINTY_SIGNALS:
-            if row[col] != "No":
-                confidence -= 10
+            if col!="required_conditions_not_met":
+
+                if row[col] != "No":
+                    confidence -= 10
+
 
         if row["has_missing_documentation"] == "Yes":
             confidence -= 15
@@ -172,6 +252,10 @@ class ClaimTriageEvaluator(BaseRiskPriors):
         if row["attachments_present"] == "No":
             confidence -= 15
 
+        if row["required_conditions_not_met"] == "No":
+            Confidence -= 10
+        if row["historical_outcome"] == "Unknown":
+            Confidence -= 5
         final_confidence = max(confidence, 30)
         logger.debug("Confidence calculated: %s", final_confidence)
         return final_confidence

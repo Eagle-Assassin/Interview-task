@@ -1,28 +1,28 @@
 {
-  "input_path": "data/InterviewTask/AI/test.csv",
-  "rows_loaded": 9,
-  "rows_after_caseid_filter": 8,
-  "invalid_rows": 2,
+  "input_path": "data/InterviewTask/AI/gold_records.csv",
+  "rows_loaded": 200,
+  "rows_after_caseid_filter": 200,
+  "invalid_rows": 0,
   "missingness": {
     "case_id": {
-      "missing_count": 1,
-      "missing_pct": 0.111
+      "missing_count": 0,
+      "missing_pct": 0.0
     },
     "received_at": {
       "missing_count": 0,
       "missing_pct": 0.0
     },
     "client_segment": {
-      "missing_count": 0,
-      "missing_pct": 0.0
+      "missing_count": 2,
+      "missing_pct": 0.01
     },
     "jurisdiction": {
-      "missing_count": 0,
-      "missing_pct": 0.0
+      "missing_count": 2,
+      "missing_pct": 0.01
     },
     "service_line": {
-      "missing_count": 0,
-      "missing_pct": 0.0
+      "missing_count": 2,
+      "missing_pct": 0.01
     },
     "claim_value_band": {
       "missing_count": 0,
@@ -37,56 +37,13 @@
       "missing_pct": 0.0
     },
     "handler_notes": {
-      "missing_count": 2,
-      "missing_pct": 0.222
+      "missing_count": 71,
+      "missing_pct": 0.355
     },
     "historical_outcome": {
       "missing_count": 0,
       "missing_pct": 0.0
     }
   },
-  "anomalies": [
-    {
-      "type": "missing_case_id",
-      "rows_dropped": 1
-    },
-    {
-      "type": "schema_validation_error",
-      "row_index": 4,
-      "case_id": "C-00005",
-      "errors": [
-        {
-          "type": "enum",
-          "loc": [
-            "jurisdiction"
-          ],
-          "msg": "Input should be 'UK', 'US', 'EU', 'Other' or 'No data Available'",
-          "input": "test",
-          "ctx": {
-            "expected": "'UK', 'US', 'EU', 'Other' or 'No data Available'"
-          },
-          "url": "https://errors.pydantic.dev/2.12/v/enum"
-        }
-      ]
-    },
-    {
-      "type": "schema_validation_error",
-      "row_index": 7,
-      "case_id": "C-00008",
-      "errors": [
-        {
-          "type": "enum",
-          "loc": [
-            "client_segment"
-          ],
-          "msg": "Input should be 'SMB', 'Mid-Market', 'Enterprise' or 'No data Available'",
-          "input": "test",
-          "ctx": {
-            "expected": "'SMB', 'Mid-Market', 'Enterprise' or 'No data Available'"
-          },
-          "url": "https://errors.pydantic.dev/2.12/v/enum"
-        }
-      ]
-    }
-  ]
+  "anomalies": []
 }
