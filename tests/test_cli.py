@@ -11,3 +11,4 @@ def test_cli_help():
 
     assert result.returncode == 0
     assert "Insurance Claim Triage System" in result.stdout
+    print(result.stdout)

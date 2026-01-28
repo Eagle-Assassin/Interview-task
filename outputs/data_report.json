@@ -1,7 +1,7 @@
 {
-  "input_path": "data/InterviewTask/AI/gold_records.csv",
-  "rows_loaded": 200,
-  "rows_after_caseid_filter": 200,
+  "input_path": "C:\\Users\\USER\\AppData\\Local\\Temp\\pytest-of-USER\\pytest-3\\test_valid_csv_passes0\\valid.csv",
+  "rows_loaded": 1,
+  "rows_after_caseid_filter": 1,
   "invalid_rows": 0,
   "missingness": {
     "case_id": {
@@ -13,16 +13,16 @@
       "missing_pct": 0.0
     },
     "client_segment": {
-      "missing_count": 2,
-      "missing_pct": 0.01
+      "missing_count": 0,
+      "missing_pct": 0.0
     },
     "jurisdiction": {
-      "missing_count": 2,
-      "missing_pct": 0.01
+      "missing_count": 0,
+      "missing_pct": 0.0
     },
     "service_line": {
-      "missing_count": 2,
-      "missing_pct": 0.01
+      "missing_count": 0,
+      "missing_pct": 0.0
     },
     "claim_value_band": {
       "missing_count": 0,
@@ -37,8 +37,8 @@
       "missing_pct": 0.0
     },
     "handler_notes": {
-      "missing_count": 71,
-      "missing_pct": 0.355
+      "missing_count": 1,
+      "missing_pct": 1.0
     },
     "historical_outcome": {
       "missing_count": 0,
